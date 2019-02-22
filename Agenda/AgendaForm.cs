@@ -16,6 +16,7 @@ namespace Agenda
     {
         private BindingList<AgendaItem> db { get; set; }
         private AgendaItem selectedContact { get; set; }
+        private bool isDbModified { get; set; }
 
         public AgendaForm()
         {
@@ -24,6 +25,7 @@ namespace Agenda
             dgwAgenda.DataSource = db;
             btnDeleteRow.Enabled = false;
             btnModifyRow.Enabled = false;
+            isDbModified = false;
         }
 
         public AgendaForm(BindingList<AgendaItem> fakeDb): this()
@@ -39,15 +41,16 @@ namespace Agenda
             //validari pt save later
             //in caz de invalidari: MessageBox.Show("asd");
             db.Add(new AgendaItem(txtNumeAdd.Text, txtPrenumeAdd.Text, int.Parse(txtVarstaAdd.Text), txtTelefonAdd.Text, txtEmailAdd.Text));
-            clearForm();
+            isDbModified = true;
+            clearFormAdd();
         }
 
         private void btnClearFormAdd_Click(object sender, EventArgs e)
         {
-            clearForm();
+            clearFormAdd();
         }
 
-        private void clearForm() {
+        private void clearFormAdd() {
             txtNumeAdd.Text = "";
             txtPrenumeAdd.Text = "";
             txtVarstaAdd.Text = "";
@@ -98,6 +101,7 @@ namespace Agenda
             contactToModify.Telefon = txtTelefonMod.Text;
             contactToModify.Email = txtEmailMod.Text;
             db.ResetBindings();
+            isDbModified = true;
             selectedContact = null;
             txtNumeMod.Text = "";
             txtPrenumeMod.Text = "";
@@ -120,18 +124,36 @@ namespace Agenda
 
         private void btnSaveToDb_Click(object sender, EventArgs e)
         {
-            using (StreamWriter file = new StreamWriter($"..\\..\\db\\db.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, db);
-            }
+            SaveToDb();
+            isDbModified = false;
         }
+
+        
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        
+        private void AgendaForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isDbModified)
+            {
+                DialogResult result = MessageBox.Show("Do you want to save your contacts to the database?", "Save changes", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    SaveToDb();
+                }
+            }
+        }
+
+        private void SaveToDb()
+        {
+            using (StreamWriter file = new StreamWriter($"..\\..\\db\\db.json"))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, db);
+            }
+        }
     }
 }

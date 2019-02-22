@@ -383,6 +383,7 @@
             this.Controls.Add(this.grbAddContact);
             this.Name = "AgendaForm";
             this.Text = "Agenda";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AgendaForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgwAgenda)).EndInit();
             this.grbAddContact.ResumeLayout(false);
             this.grbAddContact.PerformLayout();
