@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace Agenda
 {
     public class AgendaItem
     {
+        [Browsable(false)]
+        public Guid Id { get; set; }
         public string Nume { get; set; }
         public string Prenume { get; set; }
         public int Varsta { get; set; }
@@ -15,6 +18,7 @@ namespace Agenda
         public string Email { get; set; }
         public AgendaItem(string n, string p, int v, string t = "", string e = "")
         {
+            Id = Guid.NewGuid();
             Nume = n;
             Prenume = p;
             Varsta = v;

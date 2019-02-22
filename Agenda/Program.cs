@@ -21,10 +21,10 @@ namespace Agenda
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (File.Exists($"..\\..\\db.json"))
+            if (File.Exists($"..\\..\\db\\db.json"))
             {
                 BindingList<AgendaItem> db;
-                using (StreamReader file = new StreamReader($"..\\..\\db.json"))
+                using (StreamReader file = new StreamReader($"..\\..\\db\\db.json"))
                 {
                     JsonSerializer serializer = new JsonSerializer();
                     db = (BindingList<AgendaItem>)serializer.Deserialize(file, typeof(BindingList<AgendaItem>));

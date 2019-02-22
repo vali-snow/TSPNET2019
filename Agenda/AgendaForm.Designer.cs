@@ -28,107 +28,123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNume = new System.Windows.Forms.Label();
-            this.txtNume = new System.Windows.Forms.TextBox();
-            this.lblPrenume = new System.Windows.Forms.Label();
-            this.txtPrenume = new System.Windows.Forms.TextBox();
-            this.lblVarsta = new System.Windows.Forms.Label();
-            this.txtVarsta = new System.Windows.Forms.TextBox();
-            this.lblTelefon = new System.Windows.Forms.Label();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblNumeAdd = new System.Windows.Forms.Label();
+            this.txtNumeAdd = new System.Windows.Forms.TextBox();
+            this.lblPrenumeAdd = new System.Windows.Forms.Label();
+            this.txtPrenumeAdd = new System.Windows.Forms.TextBox();
+            this.lblVarstaAdd = new System.Windows.Forms.Label();
+            this.txtVarstaAdd = new System.Windows.Forms.TextBox();
+            this.lblTelefonAdd = new System.Windows.Forms.Label();
+            this.txtTelefonAdd = new System.Windows.Forms.TextBox();
+            this.lblEmailAdd = new System.Windows.Forms.Label();
+            this.txtEmailAdd = new System.Windows.Forms.TextBox();
             this.btnAddNewContact = new System.Windows.Forms.Button();
             this.dgwAgenda = new System.Windows.Forms.DataGridView();
-            this.grbAddNewContact = new System.Windows.Forms.GroupBox();
+            this.grbAddContact = new System.Windows.Forms.GroupBox();
             this.btnClearForm = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnModifyRow = new System.Windows.Forms.Button();
+            this.grbContactsGrid = new System.Windows.Forms.GroupBox();
             this.btnDeleteRow = new System.Windows.Forms.Button();
+            this.btnModifyRow = new System.Windows.Forms.Button();
+            this.btnSaveToDb = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.grbModifyContact = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblNumeMod = new System.Windows.Forms.Label();
+            this.txtNumeMod = new System.Windows.Forms.TextBox();
+            this.btnModify = new System.Windows.Forms.Button();
+            this.txtPrenumeMod = new System.Windows.Forms.TextBox();
+            this.lblEmailMod = new System.Windows.Forms.Label();
+            this.lblPrenumeMod = new System.Windows.Forms.Label();
+            this.txtEmailMod = new System.Windows.Forms.TextBox();
+            this.txtVarstaMod = new System.Windows.Forms.TextBox();
+            this.lblTelefonMod = new System.Windows.Forms.Label();
+            this.lblVarstaMod = new System.Windows.Forms.Label();
+            this.txtTelefonMod = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgwAgenda)).BeginInit();
-            this.grbAddNewContact.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grbAddContact.SuspendLayout();
+            this.grbContactsGrid.SuspendLayout();
+            this.grbModifyContact.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblNume
+            // lblNumeAdd
             // 
-            this.lblNume.AutoSize = true;
-            this.lblNume.Location = new System.Drawing.Point(43, 40);
-            this.lblNume.Name = "lblNume";
-            this.lblNume.Size = new System.Drawing.Size(35, 13);
-            this.lblNume.TabIndex = 3;
-            this.lblNume.Text = "Nume";
+            this.lblNumeAdd.AutoSize = true;
+            this.lblNumeAdd.Location = new System.Drawing.Point(43, 40);
+            this.lblNumeAdd.Name = "lblNumeAdd";
+            this.lblNumeAdd.Size = new System.Drawing.Size(35, 13);
+            this.lblNumeAdd.TabIndex = 3;
+            this.lblNumeAdd.Text = "Nume";
             // 
-            // txtNume
+            // txtNumeAdd
             // 
-            this.txtNume.Location = new System.Drawing.Point(101, 37);
-            this.txtNume.Name = "txtNume";
-            this.txtNume.Size = new System.Drawing.Size(169, 20);
-            this.txtNume.TabIndex = 2;
+            this.txtNumeAdd.Location = new System.Drawing.Point(101, 37);
+            this.txtNumeAdd.Name = "txtNumeAdd";
+            this.txtNumeAdd.Size = new System.Drawing.Size(169, 20);
+            this.txtNumeAdd.TabIndex = 2;
             // 
-            // lblPrenume
+            // lblPrenumeAdd
             // 
-            this.lblPrenume.AutoSize = true;
-            this.lblPrenume.Location = new System.Drawing.Point(43, 66);
-            this.lblPrenume.Name = "lblPrenume";
-            this.lblPrenume.Size = new System.Drawing.Size(49, 13);
-            this.lblPrenume.TabIndex = 5;
-            this.lblPrenume.Text = "Prenume";
+            this.lblPrenumeAdd.AutoSize = true;
+            this.lblPrenumeAdd.Location = new System.Drawing.Point(43, 66);
+            this.lblPrenumeAdd.Name = "lblPrenumeAdd";
+            this.lblPrenumeAdd.Size = new System.Drawing.Size(49, 13);
+            this.lblPrenumeAdd.TabIndex = 5;
+            this.lblPrenumeAdd.Text = "Prenume";
             // 
-            // txtPrenume
+            // txtPrenumeAdd
             // 
-            this.txtPrenume.Location = new System.Drawing.Point(101, 63);
-            this.txtPrenume.Name = "txtPrenume";
-            this.txtPrenume.Size = new System.Drawing.Size(169, 20);
-            this.txtPrenume.TabIndex = 4;
+            this.txtPrenumeAdd.Location = new System.Drawing.Point(101, 63);
+            this.txtPrenumeAdd.Name = "txtPrenumeAdd";
+            this.txtPrenumeAdd.Size = new System.Drawing.Size(169, 20);
+            this.txtPrenumeAdd.TabIndex = 4;
             // 
-            // lblVarsta
+            // lblVarstaAdd
             // 
-            this.lblVarsta.AutoSize = true;
-            this.lblVarsta.Location = new System.Drawing.Point(43, 92);
-            this.lblVarsta.Name = "lblVarsta";
-            this.lblVarsta.Size = new System.Drawing.Size(37, 13);
-            this.lblVarsta.TabIndex = 7;
-            this.lblVarsta.Text = "Varsta";
+            this.lblVarstaAdd.AutoSize = true;
+            this.lblVarstaAdd.Location = new System.Drawing.Point(43, 92);
+            this.lblVarstaAdd.Name = "lblVarstaAdd";
+            this.lblVarstaAdd.Size = new System.Drawing.Size(37, 13);
+            this.lblVarstaAdd.TabIndex = 7;
+            this.lblVarstaAdd.Text = "Varsta";
             // 
-            // txtVarsta
+            // txtVarstaAdd
             // 
-            this.txtVarsta.Location = new System.Drawing.Point(101, 89);
-            this.txtVarsta.Name = "txtVarsta";
-            this.txtVarsta.Size = new System.Drawing.Size(169, 20);
-            this.txtVarsta.TabIndex = 6;
+            this.txtVarstaAdd.Location = new System.Drawing.Point(101, 89);
+            this.txtVarstaAdd.Name = "txtVarstaAdd";
+            this.txtVarstaAdd.Size = new System.Drawing.Size(169, 20);
+            this.txtVarstaAdd.TabIndex = 6;
             // 
-            // lblTelefon
+            // lblTelefonAdd
             // 
-            this.lblTelefon.AutoSize = true;
-            this.lblTelefon.Location = new System.Drawing.Point(43, 118);
-            this.lblTelefon.Name = "lblTelefon";
-            this.lblTelefon.Size = new System.Drawing.Size(43, 13);
-            this.lblTelefon.TabIndex = 9;
-            this.lblTelefon.Text = "Telefon";
+            this.lblTelefonAdd.AutoSize = true;
+            this.lblTelefonAdd.Location = new System.Drawing.Point(43, 118);
+            this.lblTelefonAdd.Name = "lblTelefonAdd";
+            this.lblTelefonAdd.Size = new System.Drawing.Size(43, 13);
+            this.lblTelefonAdd.TabIndex = 9;
+            this.lblTelefonAdd.Text = "Telefon";
             // 
-            // txtTelefon
+            // txtTelefonAdd
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(101, 115);
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(169, 20);
-            this.txtTelefon.TabIndex = 8;
+            this.txtTelefonAdd.Location = new System.Drawing.Point(101, 115);
+            this.txtTelefonAdd.Name = "txtTelefonAdd";
+            this.txtTelefonAdd.Size = new System.Drawing.Size(169, 20);
+            this.txtTelefonAdd.TabIndex = 8;
             // 
-            // lblEmail
+            // lblEmailAdd
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(43, 144);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 11;
-            this.lblEmail.Text = "Email";
+            this.lblEmailAdd.AutoSize = true;
+            this.lblEmailAdd.Location = new System.Drawing.Point(43, 144);
+            this.lblEmailAdd.Name = "lblEmailAdd";
+            this.lblEmailAdd.Size = new System.Drawing.Size(32, 13);
+            this.lblEmailAdd.TabIndex = 11;
+            this.lblEmailAdd.Text = "Email";
             // 
-            // txtEmail
+            // txtEmailAdd
             // 
-            this.txtEmail.Location = new System.Drawing.Point(101, 141);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(169, 20);
-            this.txtEmail.TabIndex = 10;
+            this.txtEmailAdd.Location = new System.Drawing.Point(101, 141);
+            this.txtEmailAdd.Name = "txtEmailAdd";
+            this.txtEmailAdd.Size = new System.Drawing.Size(169, 20);
+            this.txtEmailAdd.TabIndex = 10;
             // 
             // btnAddNewContact
             // 
@@ -145,29 +161,31 @@
             this.dgwAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwAgenda.Location = new System.Drawing.Point(42, 37);
             this.dgwAgenda.Name = "dgwAgenda";
+            this.dgwAgenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwAgenda.Size = new System.Drawing.Size(717, 426);
             this.dgwAgenda.TabIndex = 13;
+            this.dgwAgenda.SelectionChanged += new System.EventHandler(this.dgwAgenda_SelectionChanged);
             // 
-            // grbAddNewContact
+            // grbAddContact
             // 
-            this.grbAddNewContact.Controls.Add(this.btnClearForm);
-            this.grbAddNewContact.Controls.Add(this.lblNume);
-            this.grbAddNewContact.Controls.Add(this.txtNume);
-            this.grbAddNewContact.Controls.Add(this.btnAddNewContact);
-            this.grbAddNewContact.Controls.Add(this.txtPrenume);
-            this.grbAddNewContact.Controls.Add(this.lblEmail);
-            this.grbAddNewContact.Controls.Add(this.lblPrenume);
-            this.grbAddNewContact.Controls.Add(this.txtEmail);
-            this.grbAddNewContact.Controls.Add(this.txtVarsta);
-            this.grbAddNewContact.Controls.Add(this.lblTelefon);
-            this.grbAddNewContact.Controls.Add(this.lblVarsta);
-            this.grbAddNewContact.Controls.Add(this.txtTelefon);
-            this.grbAddNewContact.Location = new System.Drawing.Point(61, 86);
-            this.grbAddNewContact.Name = "grbAddNewContact";
-            this.grbAddNewContact.Size = new System.Drawing.Size(314, 233);
-            this.grbAddNewContact.TabIndex = 14;
-            this.grbAddNewContact.TabStop = false;
-            this.grbAddNewContact.Text = "Add New Contact";
+            this.grbAddContact.Controls.Add(this.btnClearForm);
+            this.grbAddContact.Controls.Add(this.lblNumeAdd);
+            this.grbAddContact.Controls.Add(this.txtNumeAdd);
+            this.grbAddContact.Controls.Add(this.btnAddNewContact);
+            this.grbAddContact.Controls.Add(this.txtPrenumeAdd);
+            this.grbAddContact.Controls.Add(this.lblEmailAdd);
+            this.grbAddContact.Controls.Add(this.lblPrenumeAdd);
+            this.grbAddContact.Controls.Add(this.txtEmailAdd);
+            this.grbAddContact.Controls.Add(this.txtVarstaAdd);
+            this.grbAddContact.Controls.Add(this.lblTelefonAdd);
+            this.grbAddContact.Controls.Add(this.lblVarstaAdd);
+            this.grbAddContact.Controls.Add(this.txtTelefonAdd);
+            this.grbAddContact.Location = new System.Drawing.Point(61, 86);
+            this.grbAddContact.Name = "grbAddContact";
+            this.grbAddContact.Size = new System.Drawing.Size(314, 233);
+            this.grbAddContact.TabIndex = 14;
+            this.grbAddContact.TabStop = false;
+            this.grbAddContact.Text = "Add New Contact";
             // 
             // btnClearForm
             // 
@@ -179,26 +197,17 @@
             this.btnClearForm.UseVisualStyleBackColor = true;
             this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
-            // groupBox1
+            // grbContactsGrid
             // 
-            this.groupBox1.Controls.Add(this.btnDeleteRow);
-            this.groupBox1.Controls.Add(this.btnModifyRow);
-            this.groupBox1.Controls.Add(this.dgwAgenda);
-            this.groupBox1.Location = new System.Drawing.Point(411, 86);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(798, 521);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // btnModifyRow
-            // 
-            this.btnModifyRow.Location = new System.Drawing.Point(129, 479);
-            this.btnModifyRow.Name = "btnModifyRow";
-            this.btnModifyRow.Size = new System.Drawing.Size(75, 23);
-            this.btnModifyRow.TabIndex = 14;
-            this.btnModifyRow.Text = "Modify Row";
-            this.btnModifyRow.UseVisualStyleBackColor = true;
+            this.grbContactsGrid.Controls.Add(this.btnDeleteRow);
+            this.grbContactsGrid.Controls.Add(this.btnModifyRow);
+            this.grbContactsGrid.Controls.Add(this.dgwAgenda);
+            this.grbContactsGrid.Location = new System.Drawing.Point(411, 86);
+            this.grbContactsGrid.Name = "grbContactsGrid";
+            this.grbContactsGrid.Size = new System.Drawing.Size(798, 521);
+            this.grbContactsGrid.TabIndex = 15;
+            this.grbContactsGrid.TabStop = false;
+            this.grbContactsGrid.Text = "Contacts Grid";
             // 
             // btnDeleteRow
             // 
@@ -208,43 +217,214 @@
             this.btnDeleteRow.TabIndex = 15;
             this.btnDeleteRow.Text = "Delete Row";
             this.btnDeleteRow.UseVisualStyleBackColor = true;
+            this.btnDeleteRow.Click += new System.EventHandler(this.btnDeleteRow_Click);
+            // 
+            // btnModifyRow
+            // 
+            this.btnModifyRow.Location = new System.Drawing.Point(129, 479);
+            this.btnModifyRow.Name = "btnModifyRow";
+            this.btnModifyRow.Size = new System.Drawing.Size(75, 23);
+            this.btnModifyRow.TabIndex = 14;
+            this.btnModifyRow.Text = "Modify Row";
+            this.btnModifyRow.UseVisualStyleBackColor = true;
+            this.btnModifyRow.Click += new System.EventHandler(this.btnModifyRow_Click);
+            // 
+            // btnSaveToDb
+            // 
+            this.btnSaveToDb.Location = new System.Drawing.Point(675, 640);
+            this.btnSaveToDb.Name = "btnSaveToDb";
+            this.btnSaveToDb.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveToDb.TabIndex = 16;
+            this.btnSaveToDb.Text = "Save";
+            this.btnSaveToDb.UseVisualStyleBackColor = true;
+            this.btnSaveToDb.Click += new System.EventHandler(this.btnSaveToDb_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(781, 640);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 17;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // grbModifyContact
+            // 
+            this.grbModifyContact.Controls.Add(this.button1);
+            this.grbModifyContact.Controls.Add(this.lblNumeMod);
+            this.grbModifyContact.Controls.Add(this.txtNumeMod);
+            this.grbModifyContact.Controls.Add(this.btnModify);
+            this.grbModifyContact.Controls.Add(this.txtPrenumeMod);
+            this.grbModifyContact.Controls.Add(this.lblEmailMod);
+            this.grbModifyContact.Controls.Add(this.lblPrenumeMod);
+            this.grbModifyContact.Controls.Add(this.txtEmailMod);
+            this.grbModifyContact.Controls.Add(this.txtVarstaMod);
+            this.grbModifyContact.Controls.Add(this.lblTelefonMod);
+            this.grbModifyContact.Controls.Add(this.lblVarstaMod);
+            this.grbModifyContact.Controls.Add(this.txtTelefonMod);
+            this.grbModifyContact.Location = new System.Drawing.Point(61, 374);
+            this.grbModifyContact.Name = "grbModifyContact";
+            this.grbModifyContact.Size = new System.Drawing.Size(314, 233);
+            this.grbModifyContact.TabIndex = 15;
+            this.grbModifyContact.TabStop = false;
+            this.grbModifyContact.Text = "Modify Existing Contact";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(195, 185);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Clear";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblNumeMod
+            // 
+            this.lblNumeMod.AutoSize = true;
+            this.lblNumeMod.Location = new System.Drawing.Point(43, 40);
+            this.lblNumeMod.Name = "lblNumeMod";
+            this.lblNumeMod.Size = new System.Drawing.Size(35, 13);
+            this.lblNumeMod.TabIndex = 3;
+            this.lblNumeMod.Text = "Nume";
+            // 
+            // txtNumeMod
+            // 
+            this.txtNumeMod.Location = new System.Drawing.Point(101, 37);
+            this.txtNumeMod.Name = "txtNumeMod";
+            this.txtNumeMod.Size = new System.Drawing.Size(169, 20);
+            this.txtNumeMod.TabIndex = 2;
+            // 
+            // btnModify
+            // 
+            this.btnModify.Location = new System.Drawing.Point(46, 185);
+            this.btnModify.Name = "btnModify";
+            this.btnModify.Size = new System.Drawing.Size(75, 23);
+            this.btnModify.TabIndex = 12;
+            this.btnModify.Text = "Modify";
+            this.btnModify.UseVisualStyleBackColor = true;
+            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
+            // 
+            // txtPrenumeMod
+            // 
+            this.txtPrenumeMod.Location = new System.Drawing.Point(101, 63);
+            this.txtPrenumeMod.Name = "txtPrenumeMod";
+            this.txtPrenumeMod.Size = new System.Drawing.Size(169, 20);
+            this.txtPrenumeMod.TabIndex = 4;
+            // 
+            // lblEmailMod
+            // 
+            this.lblEmailMod.AutoSize = true;
+            this.lblEmailMod.Location = new System.Drawing.Point(43, 144);
+            this.lblEmailMod.Name = "lblEmailMod";
+            this.lblEmailMod.Size = new System.Drawing.Size(32, 13);
+            this.lblEmailMod.TabIndex = 11;
+            this.lblEmailMod.Text = "Email";
+            // 
+            // lblPrenumeMod
+            // 
+            this.lblPrenumeMod.AutoSize = true;
+            this.lblPrenumeMod.Location = new System.Drawing.Point(43, 66);
+            this.lblPrenumeMod.Name = "lblPrenumeMod";
+            this.lblPrenumeMod.Size = new System.Drawing.Size(49, 13);
+            this.lblPrenumeMod.TabIndex = 5;
+            this.lblPrenumeMod.Text = "Prenume";
+            // 
+            // txtEmailMod
+            // 
+            this.txtEmailMod.Location = new System.Drawing.Point(101, 141);
+            this.txtEmailMod.Name = "txtEmailMod";
+            this.txtEmailMod.Size = new System.Drawing.Size(169, 20);
+            this.txtEmailMod.TabIndex = 10;
+            // 
+            // txtVarstaMod
+            // 
+            this.txtVarstaMod.Location = new System.Drawing.Point(101, 89);
+            this.txtVarstaMod.Name = "txtVarstaMod";
+            this.txtVarstaMod.Size = new System.Drawing.Size(169, 20);
+            this.txtVarstaMod.TabIndex = 6;
+            // 
+            // lblTelefonMod
+            // 
+            this.lblTelefonMod.AutoSize = true;
+            this.lblTelefonMod.Location = new System.Drawing.Point(43, 118);
+            this.lblTelefonMod.Name = "lblTelefonMod";
+            this.lblTelefonMod.Size = new System.Drawing.Size(43, 13);
+            this.lblTelefonMod.TabIndex = 9;
+            this.lblTelefonMod.Text = "Telefon";
+            // 
+            // lblVarstaMod
+            // 
+            this.lblVarstaMod.AutoSize = true;
+            this.lblVarstaMod.Location = new System.Drawing.Point(43, 92);
+            this.lblVarstaMod.Name = "lblVarstaMod";
+            this.lblVarstaMod.Size = new System.Drawing.Size(37, 13);
+            this.lblVarstaMod.TabIndex = 7;
+            this.lblVarstaMod.Text = "Varsta";
+            // 
+            // txtTelefonMod
+            // 
+            this.txtTelefonMod.Location = new System.Drawing.Point(101, 115);
+            this.txtTelefonMod.Name = "txtTelefonMod";
+            this.txtTelefonMod.Size = new System.Drawing.Size(169, 20);
+            this.txtTelefonMod.TabIndex = 8;
             // 
             // AgendaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1294, 720);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grbAddNewContact);
+            this.Controls.Add(this.grbModifyContact);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnSaveToDb);
+            this.Controls.Add(this.grbContactsGrid);
+            this.Controls.Add(this.grbAddContact);
             this.Name = "AgendaForm";
             this.Text = "Agenda";
             ((System.ComponentModel.ISupportInitialize)(this.dgwAgenda)).EndInit();
-            this.grbAddNewContact.ResumeLayout(false);
-            this.grbAddNewContact.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.grbAddContact.ResumeLayout(false);
+            this.grbAddContact.PerformLayout();
+            this.grbContactsGrid.ResumeLayout(false);
+            this.grbModifyContact.ResumeLayout(false);
+            this.grbModifyContact.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblNume;
-        private System.Windows.Forms.TextBox txtNume;
-        private System.Windows.Forms.Label lblPrenume;
-        private System.Windows.Forms.TextBox txtPrenume;
-        private System.Windows.Forms.Label lblVarsta;
-        private System.Windows.Forms.TextBox txtVarsta;
-        private System.Windows.Forms.Label lblTelefon;
-        private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblNumeAdd;
+        private System.Windows.Forms.TextBox txtNumeAdd;
+        private System.Windows.Forms.Label lblPrenumeAdd;
+        private System.Windows.Forms.TextBox txtPrenumeAdd;
+        private System.Windows.Forms.Label lblVarstaAdd;
+        private System.Windows.Forms.TextBox txtVarstaAdd;
+        private System.Windows.Forms.Label lblTelefonAdd;
+        private System.Windows.Forms.TextBox txtTelefonAdd;
+        private System.Windows.Forms.Label lblEmailAdd;
+        private System.Windows.Forms.TextBox txtEmailAdd;
         private System.Windows.Forms.Button btnAddNewContact;
         private System.Windows.Forms.DataGridView dgwAgenda;
-        private System.Windows.Forms.GroupBox grbAddNewContact;
+        private System.Windows.Forms.GroupBox grbAddContact;
         private System.Windows.Forms.Button btnClearForm;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbContactsGrid;
         private System.Windows.Forms.Button btnDeleteRow;
         private System.Windows.Forms.Button btnModifyRow;
+        private System.Windows.Forms.Button btnSaveToDb;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.GroupBox grbModifyContact;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblNumeMod;
+        private System.Windows.Forms.TextBox txtNumeMod;
+        private System.Windows.Forms.Button btnModify;
+        private System.Windows.Forms.TextBox txtPrenumeMod;
+        private System.Windows.Forms.Label lblEmailMod;
+        private System.Windows.Forms.Label lblPrenumeMod;
+        private System.Windows.Forms.TextBox txtEmailMod;
+        private System.Windows.Forms.TextBox txtVarstaMod;
+        private System.Windows.Forms.Label lblTelefonMod;
+        private System.Windows.Forms.Label lblVarstaMod;
+        private System.Windows.Forms.TextBox txtTelefonMod;
     }
 }
 
