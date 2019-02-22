@@ -42,7 +42,7 @@ namespace Agenda
             clearForm();
         }
 
-        private void btnClearForm_Click(object sender, EventArgs e)
+        private void btnClearFormAdd_Click(object sender, EventArgs e)
         {
             clearForm();
         }
@@ -63,26 +63,9 @@ namespace Agenda
             txtVarstaMod.Text = selectedContact.Varsta.ToString();
             txtTelefonMod.Text = selectedContact.Telefon;
             txtEmailMod.Text = selectedContact.Email;
+            grbModifyContact.Visible = true;
         }
 
-        private void btnModify_Click(object sender, EventArgs e)
-        {
-            //validari pt modify later
-            //in caz de invalidari: MessageBox.Show("asd");
-            var contactToModify = db.Single(o => o.Id == selectedContact.Id);
-            contactToModify.Nume = txtNumeMod.Text;
-            contactToModify.Prenume = txtPrenumeMod.Text;
-            contactToModify.Varsta = int.Parse(txtVarstaMod.Text);
-            contactToModify.Telefon = txtTelefonMod.Text;
-            contactToModify.Email = txtEmailMod.Text;
-            db.ResetBindings();
-            selectedContact = null;
-            txtNumeMod.Text = "";
-            txtPrenumeMod.Text = "";
-            txtVarstaMod.Text = "";
-            txtTelefonMod.Text = "";
-            txtEmailMod.Text = "";
-        }
 
         private void btnDeleteRow_Click(object sender, EventArgs e)
         {
@@ -102,6 +85,37 @@ namespace Agenda
                 btnDeleteRow.Enabled = false;
                 btnModifyRow.Enabled = false;
             }
+        }
+
+        private void btnModify_Click(object sender, EventArgs e)
+        {
+            //validari pt modify later
+            //in caz de invalidari: MessageBox.Show("asd");
+            var contactToModify = db.Single(o => o.Id == selectedContact.Id);
+            contactToModify.Nume = txtNumeMod.Text;
+            contactToModify.Prenume = txtPrenumeMod.Text;
+            contactToModify.Varsta = int.Parse(txtVarstaMod.Text);
+            contactToModify.Telefon = txtTelefonMod.Text;
+            contactToModify.Email = txtEmailMod.Text;
+            db.ResetBindings();
+            selectedContact = null;
+            txtNumeMod.Text = "";
+            txtPrenumeMod.Text = "";
+            txtVarstaMod.Text = "";
+            txtTelefonMod.Text = "";
+            txtEmailMod.Text = "";
+            grbModifyContact.Visible = false;
+        }
+
+        private void btnCloseMod_Click(object sender, EventArgs e)
+        {
+            selectedContact = null;
+            txtNumeMod.Text = "";
+            txtPrenumeMod.Text = "";
+            txtVarstaMod.Text = "";
+            txtTelefonMod.Text = "";
+            txtEmailMod.Text = "";
+            grbModifyContact.Visible = false;
         }
 
         private void btnSaveToDb_Click(object sender, EventArgs e)

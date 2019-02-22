@@ -41,14 +41,14 @@
             this.btnAddNewContact = new System.Windows.Forms.Button();
             this.dgwAgenda = new System.Windows.Forms.DataGridView();
             this.grbAddContact = new System.Windows.Forms.GroupBox();
-            this.btnClearForm = new System.Windows.Forms.Button();
+            this.btnClearFormAdd = new System.Windows.Forms.Button();
             this.grbContactsGrid = new System.Windows.Forms.GroupBox();
             this.btnDeleteRow = new System.Windows.Forms.Button();
             this.btnModifyRow = new System.Windows.Forms.Button();
             this.btnSaveToDb = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.grbModifyContact = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCloseMod = new System.Windows.Forms.Button();
             this.lblNumeMod = new System.Windows.Forms.Label();
             this.txtNumeMod = new System.Windows.Forms.TextBox();
             this.btnModify = new System.Windows.Forms.Button();
@@ -168,7 +168,7 @@
             // 
             // grbAddContact
             // 
-            this.grbAddContact.Controls.Add(this.btnClearForm);
+            this.grbAddContact.Controls.Add(this.btnClearFormAdd);
             this.grbAddContact.Controls.Add(this.lblNumeAdd);
             this.grbAddContact.Controls.Add(this.txtNumeAdd);
             this.grbAddContact.Controls.Add(this.btnAddNewContact);
@@ -187,15 +187,15 @@
             this.grbAddContact.TabStop = false;
             this.grbAddContact.Text = "Add New Contact";
             // 
-            // btnClearForm
+            // btnClearFormAdd
             // 
-            this.btnClearForm.Location = new System.Drawing.Point(195, 185);
-            this.btnClearForm.Name = "btnClearForm";
-            this.btnClearForm.Size = new System.Drawing.Size(75, 23);
-            this.btnClearForm.TabIndex = 13;
-            this.btnClearForm.Text = "Clear";
-            this.btnClearForm.UseVisualStyleBackColor = true;
-            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
+            this.btnClearFormAdd.Location = new System.Drawing.Point(195, 185);
+            this.btnClearFormAdd.Name = "btnClearFormAdd";
+            this.btnClearFormAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnClearFormAdd.TabIndex = 13;
+            this.btnClearFormAdd.Text = "Clear";
+            this.btnClearFormAdd.UseVisualStyleBackColor = true;
+            this.btnClearFormAdd.Click += new System.EventHandler(this.btnClearFormAdd_Click);
             // 
             // grbContactsGrid
             // 
@@ -251,7 +251,7 @@
             // 
             // grbModifyContact
             // 
-            this.grbModifyContact.Controls.Add(this.button1);
+            this.grbModifyContact.Controls.Add(this.btnCloseMod);
             this.grbModifyContact.Controls.Add(this.lblNumeMod);
             this.grbModifyContact.Controls.Add(this.txtNumeMod);
             this.grbModifyContact.Controls.Add(this.btnModify);
@@ -269,15 +269,17 @@
             this.grbModifyContact.TabIndex = 15;
             this.grbModifyContact.TabStop = false;
             this.grbModifyContact.Text = "Modify Existing Contact";
+            this.grbModifyContact.Visible = false;
             // 
-            // button1
+            // btnCloseMod
             // 
-            this.button1.Location = new System.Drawing.Point(195, 185);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Clear";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCloseMod.Location = new System.Drawing.Point(195, 185);
+            this.btnCloseMod.Name = "btnCloseMod";
+            this.btnCloseMod.Size = new System.Drawing.Size(75, 23);
+            this.btnCloseMod.TabIndex = 13;
+            this.btnCloseMod.Text = "Close";
+            this.btnCloseMod.UseVisualStyleBackColor = true;
+            this.btnCloseMod.Click += new System.EventHandler(this.btnCloseMod_Click);
             // 
             // lblNumeMod
             // 
@@ -406,14 +408,14 @@
         private System.Windows.Forms.Button btnAddNewContact;
         private System.Windows.Forms.DataGridView dgwAgenda;
         private System.Windows.Forms.GroupBox grbAddContact;
-        private System.Windows.Forms.Button btnClearForm;
+        private System.Windows.Forms.Button btnClearFormAdd;
         private System.Windows.Forms.GroupBox grbContactsGrid;
         private System.Windows.Forms.Button btnDeleteRow;
         private System.Windows.Forms.Button btnModifyRow;
         private System.Windows.Forms.Button btnSaveToDb;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox grbModifyContact;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCloseMod;
         private System.Windows.Forms.Label lblNumeMod;
         private System.Windows.Forms.TextBox txtNumeMod;
         private System.Windows.Forms.Button btnModify;
