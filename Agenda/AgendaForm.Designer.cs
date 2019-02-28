@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblNumeAdd = new System.Windows.Forms.Label();
             this.txtNumeAdd = new System.Windows.Forms.TextBox();
             this.lblPrenumeAdd = new System.Windows.Forms.Label();
@@ -60,10 +61,12 @@
             this.lblTelefonMod = new System.Windows.Forms.Label();
             this.lblVarstaMod = new System.Windows.Forms.Label();
             this.txtTelefonMod = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgwAgenda)).BeginInit();
             this.grbAddContact.SuspendLayout();
             this.grbContactsGrid.SuspendLayout();
             this.grbModifyContact.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumeAdd
@@ -81,6 +84,7 @@
             this.txtNumeAdd.Name = "txtNumeAdd";
             this.txtNumeAdd.Size = new System.Drawing.Size(169, 20);
             this.txtNumeAdd.TabIndex = 2;
+            this.txtNumeAdd.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumeAdd_Validating);
             // 
             // lblPrenumeAdd
             // 
@@ -97,6 +101,7 @@
             this.txtPrenumeAdd.Name = "txtPrenumeAdd";
             this.txtPrenumeAdd.Size = new System.Drawing.Size(169, 20);
             this.txtPrenumeAdd.TabIndex = 4;
+            this.txtPrenumeAdd.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrenumeAdd_Validating);
             // 
             // lblVarstaAdd
             // 
@@ -113,6 +118,7 @@
             this.txtVarstaAdd.Name = "txtVarstaAdd";
             this.txtVarstaAdd.Size = new System.Drawing.Size(169, 20);
             this.txtVarstaAdd.TabIndex = 6;
+            this.txtVarstaAdd.Validating += new System.ComponentModel.CancelEventHandler(this.txtVarstaAdd_Validating);
             // 
             // lblTelefonAdd
             // 
@@ -158,9 +164,14 @@
             // 
             // dgwAgenda
             // 
+            this.dgwAgenda.AllowUserToAddRows = false;
+            this.dgwAgenda.AllowUserToDeleteRows = false;
+            this.dgwAgenda.AllowUserToResizeRows = false;
             this.dgwAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgwAgenda.Location = new System.Drawing.Point(42, 37);
+            this.dgwAgenda.MultiSelect = false;
             this.dgwAgenda.Name = "dgwAgenda";
+            this.dgwAgenda.ReadOnly = true;
             this.dgwAgenda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgwAgenda.Size = new System.Drawing.Size(717, 426);
             this.dgwAgenda.TabIndex = 13;
@@ -296,6 +307,7 @@
             this.txtNumeMod.Name = "txtNumeMod";
             this.txtNumeMod.Size = new System.Drawing.Size(169, 20);
             this.txtNumeMod.TabIndex = 2;
+            this.txtNumeMod.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumeMod_Validating);
             // 
             // btnModify
             // 
@@ -313,6 +325,7 @@
             this.txtPrenumeMod.Name = "txtPrenumeMod";
             this.txtPrenumeMod.Size = new System.Drawing.Size(169, 20);
             this.txtPrenumeMod.TabIndex = 4;
+            this.txtPrenumeMod.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrenumeMod_Validating);
             // 
             // lblEmailMod
             // 
@@ -345,6 +358,7 @@
             this.txtVarstaMod.Name = "txtVarstaMod";
             this.txtVarstaMod.Size = new System.Drawing.Size(169, 20);
             this.txtVarstaMod.TabIndex = 6;
+            this.txtVarstaMod.Validating += new System.ComponentModel.CancelEventHandler(this.txtVarstaMod_Validating);
             // 
             // lblTelefonMod
             // 
@@ -371,6 +385,10 @@
             this.txtTelefonMod.Size = new System.Drawing.Size(169, 20);
             this.txtTelefonMod.TabIndex = 8;
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
             // AgendaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +408,7 @@
             this.grbContactsGrid.ResumeLayout(false);
             this.grbModifyContact.ResumeLayout(false);
             this.grbModifyContact.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -428,6 +447,7 @@
         private System.Windows.Forms.Label lblTelefonMod;
         private System.Windows.Forms.Label lblVarstaMod;
         private System.Windows.Forms.TextBox txtTelefonMod;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 
