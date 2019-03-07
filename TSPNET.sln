@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agenda", "Agenda\Agenda.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{0BDD9C51-01B7-416D-BDBD-1BCAFADE23F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelDesignFirst_L1", "ModelDesignFirst_L1\ModelDesignFirst_L1.csproj", "{4561862F-CDDC-403C-9152-76971AC7EA27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0BDD9C51-01B7-416D-BDBD-1BCAFADE23F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BDD9C51-01B7-416D-BDBD-1BCAFADE23F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BDD9C51-01B7-416D-BDBD-1BCAFADE23F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4561862F-CDDC-403C-9152-76971AC7EA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4561862F-CDDC-403C-9152-76971AC7EA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4561862F-CDDC-403C-9152-76971AC7EA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4561862F-CDDC-403C-9152-76971AC7EA27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

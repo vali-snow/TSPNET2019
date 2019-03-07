@@ -20,7 +20,7 @@ namespace Calculator
         public Calculator()
         {
             InitializeComponent();
-            db = new BindingList<CalculationResult>() { new CalculationResult(1, Operation.Add, 2, 3) };
+            db = new BindingList<CalculationResult>();
             dgwHistory.DataSource = db;
             Operation = Operation.None;
         }
