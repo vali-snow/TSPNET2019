@@ -25,13 +25,14 @@ namespace ModelDesignFirst_L1
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<Auto> Autos { get; set; }
-        public virtual DbSet<Sasiu> Sasius { get; set; }
-        public virtual DbSet<Mecanic> Mecanics { get; set; }
-        public virtual DbSet<Material> Materials { get; set; }
-        public virtual DbSet<Imagine> Imagines { get; set; }
-        public virtual DbSet<Operatie> Operaties { get; set; }
-        public virtual DbSet<Comanda> Comands { get; set; }
+        public virtual DbSet<Client> Clienti { get; set; }
+        public virtual DbSet<Auto> Autoturisme { get; set; }
+        public virtual DbSet<Sasiu> Sasiuri { get; set; }
+        public virtual DbSet<Mecanic> Mecanici { get; set; }
+        public virtual DbSet<Material> Materiale { get; set; }
+        public virtual DbSet<Imagine> Imagini { get; set; }
+        public virtual DbSet<Operatie> Operatii { get; set; }
+        public virtual DbSet<Comanda> Comenzi { get; set; }
+        public virtual DbSet<DetaliiComanda> DetaliiComenzi { get; set; }
     }
 }

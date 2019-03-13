@@ -17,18 +17,18 @@ namespace ModelDesignFirst_L1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Auto()
         {
-            this.Comandas = new HashSet<Comanda>();
+            this.Comenzi = new HashSet<Comanda>();
         }
     
         public int AutoId { get; set; }
         public string NumarAuto { get; set; }
-        public string SerieSasiu { get; set; }
         public int SasiuId { get; set; }
+        public string SerieSasiu { get; set; }
         public int ClientId { get; set; }
     
         public virtual Sasiu Sasiu { get; set; }
-        public virtual Client Client { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Comanda> Comandas { get; set; }
+        public virtual ICollection<Comanda> Comenzi { get; set; }
+        public virtual Client Client { get; set; }
     }
 }

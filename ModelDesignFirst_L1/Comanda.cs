@@ -14,16 +14,24 @@ namespace ModelDesignFirst_L1
     
     public partial class Comanda
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Comanda()
+        {
+            this.DetaliiComanda = new HashSet<DetaliiComanda>();
+        }
+    
         public int ComandaId { get; set; }
         public int AutoId { get; set; }
-        public string StareComanda { get; set; }
+        public StareComanda StareComanda { get; set; }
         public string DataSystem { get; set; }
         public string DataProgramare { get; set; }
         public string DataFinalizare { get; set; }
-        public string KmBord { get; set; }
+        public int KmBord { get; set; }
         public string Descriere { get; set; }
         public string ValoarePiese { get; set; }
     
         public virtual Auto Auto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DetaliiComanda> DetaliiComanda { get; set; }
     }
 }

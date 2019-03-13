@@ -17,7 +17,7 @@ namespace ModelDesignFirst_L1
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
         {
-            this.Autoes = new HashSet<Auto>();
+            this.Autoturisme = new HashSet<Auto>();
         }
     
         public int ClientId { get; set; }
@@ -30,6 +30,6 @@ namespace ModelDesignFirst_L1
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Auto> Autoes { get; set; }
+        public virtual ICollection<Auto> Autoturisme { get; set; }
     }
 }

@@ -12,19 +12,25 @@ namespace ModelDesignFirst_L1
     using System;
     using System.Collections.Generic;
     
-    public partial class Sasiu
+    public partial class DetaliiComanda
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Sasiu()
+        public DetaliiComanda()
         {
-            this.Autoturisme = new HashSet<Auto>();
+            this.Materiale = new HashSet<Material>();
+            this.Imagini = new HashSet<Imagine>();
         }
     
-        public int SasiuId { get; set; }
-        public string CodSasiu { get; set; }
-        public string Denumire { get; set; }
+        public int DetaliuComandaId { get; set; }
+        public int ComandaId { get; set; }
+        public int MecanicMecanicId { get; set; }
     
+        public virtual Comanda Comanda { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Auto> Autoturisme { get; set; }
+        public virtual ICollection<Material> Materiale { get; set; }
+        public virtual Operatie Operatie { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Imagine> Imagini { get; set; }
+        public virtual Mecanic Mecanic { get; set; }
     }
 }

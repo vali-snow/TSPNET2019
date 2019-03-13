@@ -10,14 +10,11 @@
 namespace ModelDesignFirst_L1
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Operatie
+    public enum StareComanda : int
     {
-        public int OperatieId { get; set; }
-        public string Denumire { get; set; }
-        public decimal TimpExecutie { get; set; }
-    
-        public virtual DetaliiComanda DetaliiComanda { get; set; }
+        InAsteptare = 0,
+        Executata = 1,
+        ReuzataLaExecutie = 2
     }
 }
