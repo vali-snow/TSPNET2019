@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="14e41594509c43b2a4e2314af26dba91" Name="Diagram1" ZoomLevel="82" >
+        <EntityTypeShape EntityType="ServiceAutoModel.Auto" Width="1.5" PointX="0.625" PointY="4.375" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Sasiu" Width="1.5" PointX="0.625" PointY="0.875" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Mecanic" Width="1.5" PointX="8.5" PointY="0.625" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Material" Width="1.5" PointX="8.5" PointY="3.125" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Imagine" Width="1.5" PointX="8.5" PointY="6.125" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Operatie" Width="1.5" PointX="8.5" PointY="9" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Comanda" Width="1.5" PointX="3.25" PointY="4.125" />
+        <EntityTypeShape EntityType="ServiceAutoModel.DetaliiComanda" Width="2" PointX="5.625" PointY="4.5" />
+        <EntityTypeShape EntityType="ServiceAutoModel.Client" Width="1.5" PointX="0.625" PointY="7.625" />
+        <AssociationConnector Association="ServiceAutoModel.SasiuAuto" />
+        <AssociationConnector Association="ServiceAutoModel.AutoComanda" />
+        <AssociationConnector Association="ServiceAutoModel.ClientAuto" />
+        <AssociationConnector Association="ServiceAutoModel.DetaliComandaMaterial" />
+        <AssociationConnector Association="ServiceAutoModel.DetaliComandaImagine" />
+        <AssociationConnector Association="ServiceAutoModel.DetaliComandaOperatie" />
+        <AssociationConnector Association="ServiceAutoModel.ComandaDetaliComanda" />
+        <AssociationConnector Association="ServiceAutoModel.MecanicDetaliiComanda" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
