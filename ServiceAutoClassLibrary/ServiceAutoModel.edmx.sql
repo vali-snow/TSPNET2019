@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/14/2019 14:56:48
+-- Date Created: 03/17/2019 01:14:15
 -- Generated from EDMX file: C:\Code\TSPNET\ServiceAutoClassLibrary\ServiceAutoModel.edmx
 -- --------------------------------------------------
 
@@ -17,11 +17,68 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_SasiuAuto]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Autoturisme] DROP CONSTRAINT [FK_SasiuAuto];
+GO
+IF OBJECT_ID(N'[dbo].[FK_AutoComanda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Comenzi] DROP CONSTRAINT [FK_AutoComanda];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ClientAuto]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Autoturisme] DROP CONSTRAINT [FK_ClientAuto];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DetaliComandaMaterial_DetaliiComanda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DetaliComandaMaterial] DROP CONSTRAINT [FK_DetaliComandaMaterial_DetaliiComanda];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DetaliComandaMaterial_Material]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DetaliComandaMaterial] DROP CONSTRAINT [FK_DetaliComandaMaterial_Material];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DetaliComandaImagine]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Imagini] DROP CONSTRAINT [FK_DetaliComandaImagine];
+GO
+IF OBJECT_ID(N'[dbo].[FK_DetaliComandaOperatie]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DetaliiComenzi] DROP CONSTRAINT [FK_DetaliComandaOperatie];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ComandaDetaliComanda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DetaliiComenzi] DROP CONSTRAINT [FK_ComandaDetaliComanda];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MecanicDetaliiComanda]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[DetaliiComenzi] DROP CONSTRAINT [FK_MecanicDetaliiComanda];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Autoturisme]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Autoturisme];
+GO
+IF OBJECT_ID(N'[dbo].[Sasiuri]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Sasiuri];
+GO
+IF OBJECT_ID(N'[dbo].[Mecanici]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Mecanici];
+GO
+IF OBJECT_ID(N'[dbo].[Materiale]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Materiale];
+GO
+IF OBJECT_ID(N'[dbo].[Imagini]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Imagini];
+GO
+IF OBJECT_ID(N'[dbo].[Operatii]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Operatii];
+GO
+IF OBJECT_ID(N'[dbo].[Comenzi]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Comenzi];
+GO
+IF OBJECT_ID(N'[dbo].[DetaliiComenzi]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DetaliiComenzi];
+GO
+IF OBJECT_ID(N'[dbo].[Clienti]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Clienti];
+GO
+IF OBJECT_ID(N'[dbo].[DetaliComandaMaterial]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[DetaliComandaMaterial];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -70,7 +127,7 @@ CREATE TABLE [dbo].[Imagini] (
     [Descriere] nvarchar(256)  NOT NULL,
     [Data] datetime  NOT NULL,
     [Foto] varbinary(max)  NOT NULL,
-    [DetaliiComanda_DetaliuComandaId] int  NOT NULL
+    [DetaliuComanda_DetaliuComandaId] int  NOT NULL
 );
 GO
 
@@ -86,13 +143,14 @@ GO
 CREATE TABLE [dbo].[Comenzi] (
     [ComandaId] int IDENTITY(1,1) NOT NULL,
     [AutoId] int  NOT NULL,
-    [StareComanda] nvarchar(max)  NOT NULL,
-    [DataSystem] nvarchar(max)  NOT NULL,
-    [DataProgramare] nvarchar(max)  NOT NULL,
-    [DataFinalizare] nvarchar(max)  NOT NULL,
+    [ClientId] int  NOT NULL,
+    [StareComanda] int  NOT NULL,
+    [DataSystem] datetime  NOT NULL,
+    [DataProgramare] datetime  NOT NULL,
+    [DataFinalizare] datetime  NOT NULL,
     [KmBord] int  NOT NULL,
-    [Descriere] nvarchar(max)  NOT NULL,
-    [ValoarePiese] nvarchar(max)  NOT NULL
+    [Descriere] nvarchar(1024)  NOT NULL,
+    [ValoarePiese] decimal(10,2)  NOT NULL
 );
 GO
 
@@ -262,10 +320,10 @@ ON [dbo].[DetaliComandaMaterial]
     ([Materiale_MaterialId]);
 GO
 
--- Creating foreign key on [DetaliiComanda_DetaliuComandaId] in table 'Imagini'
+-- Creating foreign key on [DetaliuComanda_DetaliuComandaId] in table 'Imagini'
 ALTER TABLE [dbo].[Imagini]
 ADD CONSTRAINT [FK_DetaliComandaImagine]
-    FOREIGN KEY ([DetaliiComanda_DetaliuComandaId])
+    FOREIGN KEY ([DetaliuComanda_DetaliuComandaId])
     REFERENCES [dbo].[DetaliiComenzi]
         ([DetaliuComandaId])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -274,7 +332,7 @@ GO
 -- Creating non-clustered index for FOREIGN KEY 'FK_DetaliComandaImagine'
 CREATE INDEX [IX_FK_DetaliComandaImagine]
 ON [dbo].[Imagini]
-    ([DetaliiComanda_DetaliuComandaId]);
+    ([DetaliuComanda_DetaliuComandaId]);
 GO
 
 -- Creating foreign key on [Operatie_OperatieId] in table 'DetaliiComenzi'
@@ -292,21 +350,6 @@ ON [dbo].[DetaliiComenzi]
     ([Operatie_OperatieId]);
 GO
 
--- Creating foreign key on [ComandaId] in table 'DetaliiComenzi'
-ALTER TABLE [dbo].[DetaliiComenzi]
-ADD CONSTRAINT [FK_ComandaDetaliComanda]
-    FOREIGN KEY ([ComandaId])
-    REFERENCES [dbo].[Comenzi]
-        ([ComandaId])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_ComandaDetaliComanda'
-CREATE INDEX [IX_FK_ComandaDetaliComanda]
-ON [dbo].[DetaliiComenzi]
-    ([ComandaId]);
-GO
-
 -- Creating foreign key on [MecanicId] in table 'DetaliiComenzi'
 ALTER TABLE [dbo].[DetaliiComenzi]
 ADD CONSTRAINT [FK_MecanicDetaliiComanda]
@@ -320,6 +363,36 @@ GO
 CREATE INDEX [IX_FK_MecanicDetaliiComanda]
 ON [dbo].[DetaliiComenzi]
     ([MecanicId]);
+GO
+
+-- Creating foreign key on [ComandaId] in table 'DetaliiComenzi'
+ALTER TABLE [dbo].[DetaliiComenzi]
+ADD CONSTRAINT [FK_ComandaDetaliiComanda]
+    FOREIGN KEY ([ComandaId])
+    REFERENCES [dbo].[Comenzi]
+        ([ComandaId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ComandaDetaliiComanda'
+CREATE INDEX [IX_FK_ComandaDetaliiComanda]
+ON [dbo].[DetaliiComenzi]
+    ([ComandaId]);
+GO
+
+-- Creating foreign key on [ClientId] in table 'Comenzi'
+ALTER TABLE [dbo].[Comenzi]
+ADD CONSTRAINT [FK_ClientComanda]
+    FOREIGN KEY ([ClientId])
+    REFERENCES [dbo].[Clienti]
+        ([ClientId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ClientComanda'
+CREATE INDEX [IX_FK_ClientComanda]
+ON [dbo].[Comenzi]
+    ([ClientId]);
 GO
 
 -- --------------------------------------------------

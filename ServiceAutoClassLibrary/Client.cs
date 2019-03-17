@@ -18,6 +18,7 @@ namespace ServiceAutoClassLibrary
         public Client()
         {
             this.Autoturisme = new HashSet<Auto>();
+            this.Comenzi = new HashSet<Comanda>();
         }
     
         public int ClientId { get; set; }
@@ -31,5 +32,7 @@ namespace ServiceAutoClassLibrary
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Auto> Autoturisme { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comanda> Comenzi { get; set; }
     }
 }

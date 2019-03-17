@@ -8,41 +8,45 @@ namespace ServiceAutoClassLibrary.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly DbContext Context;
+        protected readonly DbSet<T> Set;
 
         public Repository(DbContext context)
         {
-            Context = context;
+            Set = context.Set<T>();
+        }
+
+        public T GetById(int id) {
+            return Set.Find(id);
         }
 
         public IEnumerable<T> GetAll()
         {
-            return Context.Set<T>().ToList();
+            return Set.ToList();
         }
 
         public IEnumerable<T> GetFiltered(Expression<Func<T, bool>> predicate)
         {
-            return Context.Set<T>().Where(predicate);
+            return Set.Where(predicate);
         }
 
         public void Add(T entity)
         {
-            Context.Set<T>().Add(entity);
+            Set.Add(entity);
         }
 
         public void AddRange(IEnumerable<T> entities)
         {
-            Context.Set<T>().AddRange(entities);
+            Set.AddRange(entities);
         }
 
         public void Remove(T entity)
         {
-            Context.Set<T>().Remove(entity);
+            Set.Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<T> entities)
         {
-            Context.Set<T>().RemoveRange(entities);
+            Set.RemoveRange(entities);
         }
     }
 }

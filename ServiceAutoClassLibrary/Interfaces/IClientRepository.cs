@@ -1,7 +1,9 @@
-﻿namespace ServiceAutoClassLibrary.Repositories
+﻿using System.Collections.Generic;
+
+namespace ServiceAutoClassLibrary.Repositories
 {
     public interface IClientRepository : IRepository<Client>
     {
-        //for additional operations
+        IEnumerable<Comanda> GetComenziOfClient(int CustomerId);
     }
 }

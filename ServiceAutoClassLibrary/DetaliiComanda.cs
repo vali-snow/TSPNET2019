@@ -30,7 +30,7 @@ namespace ServiceAutoClassLibrary
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Imagine> Imagini { get; set; }
         public virtual Operatie Operatie { get; set; }
-        public virtual Comanda Comanda { get; set; }
         public virtual Mecanic Mecanic { get; set; }
+        public virtual Comanda Comanda { get; set; }
     }
 }

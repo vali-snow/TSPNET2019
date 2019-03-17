@@ -10,16 +10,11 @@
 namespace ServiceAutoClassLibrary
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Imagine
+    public enum Stare : int
     {
-        public int ImagineId { get; set; }
-        public string Titlu { get; set; }
-        public string Descriere { get; set; }
-        public System.DateTime Data { get; set; }
-        public byte[] Foto { get; set; }
-    
-        public virtual DetaliiComanda DetaliuComanda { get; set; }
+        InAsteptare = 0,
+        Executata = 1,
+        RefuzataLaExecutie = 2
     }
 }

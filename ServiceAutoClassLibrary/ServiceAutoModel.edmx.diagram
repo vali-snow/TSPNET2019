@@ -20,8 +20,9 @@
         <AssociationConnector Association="ServiceAutoModel.DetaliComandaMaterial" />
         <AssociationConnector Association="ServiceAutoModel.DetaliComandaImagine" />
         <AssociationConnector Association="ServiceAutoModel.DetaliComandaOperatie" />
-        <AssociationConnector Association="ServiceAutoModel.ComandaDetaliComanda" />
         <AssociationConnector Association="ServiceAutoModel.MecanicDetaliiComanda" />
+        <AssociationConnector Association="ServiceAutoModel.ComandaDetaliiComanda" />
+        <AssociationConnector Association="ServiceAutoModel.ClientComanda" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

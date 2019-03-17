@@ -22,16 +22,18 @@ namespace ServiceAutoClassLibrary
     
         public int ComandaId { get; set; }
         public int AutoId { get; set; }
-        public string StareComanda { get; set; }
-        public string DataSystem { get; set; }
-        public string DataProgramare { get; set; }
-        public string DataFinalizare { get; set; }
+        public int ClientId { get; set; }
+        public Stare StareComanda { get; set; }
+        public System.DateTime DataSystem { get; set; }
+        public System.DateTime DataProgramare { get; set; }
+        public System.DateTime DataFinalizare { get; set; }
         public int KmBord { get; set; }
         public string Descriere { get; set; }
-        public string ValoarePiese { get; set; }
+        public decimal ValoarePiese { get; set; }
     
         public virtual Auto Auto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetaliiComanda> DetaliiComanda { get; set; }
+        public virtual Client Client { get; set; }
     }
 }
