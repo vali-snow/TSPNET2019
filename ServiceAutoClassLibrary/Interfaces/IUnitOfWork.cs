@@ -2,6 +2,9 @@
 
 namespace ServiceAutoClassLibrary.Repositories
 {
+    /// <summary>
+    /// Interface for the unit of work
+    /// </summary>
     public interface IUnitOfWork: IDisposable
     {
         IAutoRepository Autoturisme { get; }

@@ -2,9 +2,16 @@
 
 namespace ServiceAutoClassLibrary.Repositories
 {
+    /// <summary>
+    /// Implementation of additional Mecanic repository operations
+    /// </summary>
     internal class MecanicRepository : Repository<Mecanic>, IMecanicRepository
     {
-        public MecanicRepository(DbContext context) : base(context)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="context"></param>
+        internal MecanicRepository(DbContext context) : base(context)
         {
         }
     }

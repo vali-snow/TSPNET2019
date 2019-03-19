@@ -4,6 +4,10 @@ using System.Linq.Expressions;
 
 namespace ServiceAutoClassLibrary.Repositories
 {
+    /// <summary>
+    /// Interface for the generic repository
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public interface IRepository<T> where T : class
     {
         T GetById(int id);

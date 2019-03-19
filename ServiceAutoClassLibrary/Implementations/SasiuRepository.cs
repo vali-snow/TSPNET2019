@@ -2,9 +2,16 @@
 
 namespace ServiceAutoClassLibrary.Repositories
 {
+    /// <summary>
+    /// Implementation of additional Sasiu repository operations
+    /// </summary>
     internal class SasiuRepository : Repository<Sasiu>, ISasiuRepository
     {
-        public SasiuRepository(DbContext context) : base(context)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="context"></param>
+        internal SasiuRepository(DbContext context) : base(context)
         {
         }
     }

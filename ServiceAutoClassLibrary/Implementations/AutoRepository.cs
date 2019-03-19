@@ -2,9 +2,16 @@
 
 namespace ServiceAutoClassLibrary.Repositories
 {
-    public class AutoRepository : Repository<Auto>, IAutoRepository
+    /// <summary>
+    /// Implementation of additional Auto repository operations
+    /// </summary>
+    internal class AutoRepository : Repository<Auto>, IAutoRepository
     {
-        public AutoRepository(DbContext context) : base(context)
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="context"></param>
+        internal AutoRepository(DbContext context) : base(context)
         {
         }
     }
