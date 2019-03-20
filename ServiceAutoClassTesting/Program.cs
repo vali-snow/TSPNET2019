@@ -1,4 +1,15 @@
-﻿using ServiceAutoClassLibrary;
+﻿/// <summary>
+/// Nume si prenume: Sarghi Valentin
+/// Laborator: Joi 14-16
+/// Tema laborator: Proiect TSP.Net - Partea I: Class Library
+/// Data predare proiect: 21.03.2019
+/// Declaratie: Acest proiect nu a fost copiat din alte surse. Pana la proba contrara, doresc sa beneficiez de prezumtia de nevinovatie.
+/// Bibliografie, surse de inspiratie:
+/// https://youtu.be/rYK0B1CQUN8
+/// https://youtu.be/rtXpYpZdOzM
+/// </summary>
+
+using ServiceAutoClassLibrary;
 using ServiceAutoClassLibrary.Repositories;
 using System;
 using System.Collections.Generic;
