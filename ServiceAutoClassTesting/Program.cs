@@ -7,7 +7,8 @@
 /// Bibliografie, surse de inspiratie:
 /// https://youtu.be/rYK0B1CQUN8
 /// https://youtu.be/rtXpYpZdOzM
-/// </summary>
+/// </summary>
+
 
 using ServiceAutoClassLibrary;
 using ServiceAutoClassLibrary.Repositories;
@@ -23,10 +24,10 @@ namespace ServiceAutoClassTesting
         {
             using (var unitOfWork = new UnitOfWork(new ServiceAutoModelContainer()))
             {
-                //SeedDB();
-                var client = unitOfWork.Clienti.GetAll().FirstOrDefault();
-                var comenzi1 = client.Comenzi;
-                var comenzi2 = unitOfWork.Clienti.GetComenziOfClient(client.ClientId);
+                SeedDB();
+                //var client = unitOfWork.Clienti.GetAll().FirstOrDefault();
+                //var comenzi1 = client.Comenzi;
+                //var comenzi2 = unitOfWork.Clienti.GetComenziOfClient(client.ClientId);
             }
         }
 
@@ -34,6 +35,17 @@ namespace ServiceAutoClassTesting
         {
             using (var unitOfWork = new UnitOfWork(new ServiceAutoModelContainer()))
             {
+                unitOfWork.Autoturisme.RemoveRange(unitOfWork.Autoturisme.GetAll());
+                unitOfWork.Clienti.RemoveRange(unitOfWork.Clienti.GetAll());
+                unitOfWork.Comenzi.RemoveRange(unitOfWork.Comenzi.GetAll());
+                unitOfWork.DetaliiComenzi.RemoveRange(unitOfWork.DetaliiComenzi.GetAll());
+                unitOfWork.Imagini.RemoveRange(unitOfWork.Imagini.GetAll());
+                unitOfWork.Materiale.RemoveRange(unitOfWork.Materiale.GetAll());
+                unitOfWork.Mecanici.RemoveRange(unitOfWork.Mecanici.GetAll());
+                unitOfWork.Operatii.RemoveRange(unitOfWork.Operatii.GetAll());
+                unitOfWork.Sasiuri.RemoveRange(unitOfWork.Sasiuri.GetAll());
+
+
                 var client1 = new Client() { Nume = "S", Prenume = "Valentin", Adresa = "Str. X nr. 28A", Localitate = "Iasi", Judet = "Iasi", Telefon = "", Email = "" };
                 var client2 = new Client() { Nume = "S", Prenume = "Ana", Adresa = "Str. X nr. 28A", Localitate = "Iasi", Judet = "Iasi", Telefon = "", Email = "" };
 
@@ -55,4 +67,4 @@ namespace ServiceAutoClassTesting
             }
         }
     }
-}
+} 

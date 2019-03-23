@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{565B9D4D-98BD-454B-8661-A708EDFA98C1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ServiceAutoClassTesting</RootNamespace>
-    <AssemblyName>ServiceAutoClassTesting</AssemblyName>
+    <ProjectGuid>{4CFA7767-8886-4DE4-B6E5-0DFACC5A82BC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ServiceAutoWinForm</RootNamespace>
+    <AssemblyName>ServiceAutoWinForm</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,25 +46,64 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clienti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clienti.Designer.cs">
+      <DependentUpon>Clienti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientiAddMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientiAddMod.Designer.cs">
+      <DependentUpon>ClientiAddMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
+    <EmbeddedResource Include="Clienti.resx">
+      <DependentUpon>Clienti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientiAddMod.resx">
+      <DependentUpon>ClientiAddMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ServiceAutoClassLibrary\ServiceAutoClassLibrary.csproj">
