@@ -59,6 +59,7 @@
             this.btnAutoturisme.TabIndex = 1;
             this.btnAutoturisme.Text = "Autoturisme";
             this.btnAutoturisme.UseVisualStyleBackColor = true;
+            this.btnAutoturisme.Click += new System.EventHandler(this.btnAutoturisme_Click);
             // 
             // btnSasiuri
             // 
@@ -68,6 +69,7 @@
             this.btnSasiuri.TabIndex = 2;
             this.btnSasiuri.Text = "Sasiuri";
             this.btnSasiuri.UseVisualStyleBackColor = true;
+            this.btnSasiuri.Click += new System.EventHandler(this.btnSasiuri_Click);
             // 
             // btnComenzi
             // 
@@ -77,6 +79,7 @@
             this.btnComenzi.TabIndex = 3;
             this.btnComenzi.Text = "Comenzi";
             this.btnComenzi.UseVisualStyleBackColor = true;
+            this.btnComenzi.Click += new System.EventHandler(this.btnComenzi_Click);
             // 
             // btnDetaliiComenzi
             // 

@@ -39,10 +39,6 @@ namespace ServiceAutoWinForm
             txtEmail.Text = client.Cells["Email"].Value.ToString();
         }
 
-        private void ClientiAddMod_Load(object sender, EventArgs e)
-        {
-        }
-
         private void btnAddModClient_Click(object sender, EventArgs e)
         {
             if (txtClientId.Text.ToString() == "")
@@ -53,7 +49,6 @@ namespace ServiceAutoWinForm
             else
             {
                 var client = uow.Clienti.GetById(Convert.ToInt32(txtClientId.Text.ToString()));
-                client.Nume = txtNume.Text;
                 if (client.Nume != txtNume.Text) { client.Nume = txtNume.Text; }
                 if (client.Prenume != txtPrenume.Text) { client.Prenume = txtPrenume.Text; }
                 if (client.Adresa != txtAdresa.Text) { client.Adresa = txtAdresa.Text; }

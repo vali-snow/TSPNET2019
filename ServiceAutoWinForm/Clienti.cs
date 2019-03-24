@@ -15,12 +15,11 @@ namespace ServiceAutoWinForm
     public partial class Clienti : Form
     {
         private UnitOfWork uow;
-        private BindingList<Client> clienti;
+        internal Dictionary<string, string> onCloseParameters = new Dictionary<string, string>();
         public Clienti(UnitOfWork uowR)
         {
             InitializeComponent();
             uow = uowR;
-
         }
 
         private void RefreshGrid()
@@ -29,10 +28,12 @@ namespace ServiceAutoWinForm
             bind.DataSource = uow.Clienti.GetAll();
             dataGridViewClienti.DataSource = bind;
             dataGridViewClienti.ClearSelection();
-            btnRefreshClient.Enabled = true;
-            btnAddClient.Enabled = true;
+            btnLinkAutoturisme.Enabled = false;
+            btnLinkComenzi.Enabled = false;
             btnModifySelectedClient.Enabled = false;
             btnRemoveSelectedClienti.Enabled = false;
+            btnRefreshClient.Enabled = true;
+            btnAddClient.Enabled = true;
             btnExitClienti.Enabled = true;
             dataGridViewClienti.Refresh();
         }
@@ -58,44 +59,49 @@ namespace ServiceAutoWinForm
             switch (dataGridViewClienti.SelectedRows.Count)
             {
                 case 0:
-                    btnRefreshClient.Enabled = true;
-                    btnAddClient.Enabled = true;
+                    btnLinkAutoturisme.Enabled = false;
+                    btnLinkComenzi.Enabled = false;
                     btnModifySelectedClient.Enabled = false;
                     btnRemoveSelectedClienti.Enabled = false;
+                    btnRefreshClient.Enabled = true;
+                    btnAddClient.Enabled = true;
                     btnExitClienti.Enabled = true;
                     break;
                 case 1:
-                    btnRefreshClient.Enabled = true;
-                    btnAddClient.Enabled = true;
+                    btnLinkAutoturisme.Enabled = true;
+                    btnLinkComenzi.Enabled = true;
                     btnModifySelectedClient.Enabled = true;
                     btnRemoveSelectedClienti.Enabled = true;
+                    btnRefreshClient.Enabled = true;
+                    btnAddClient.Enabled = true;
                     btnExitClienti.Enabled = true;
                     break;
                 default:
-                    btnRefreshClient.Enabled = true;
-                    btnAddClient.Enabled = true;
+                    btnLinkAutoturisme.Enabled = false;
+                    btnLinkComenzi.Enabled = false;
                     btnModifySelectedClient.Enabled = false;
                     btnRemoveSelectedClienti.Enabled = true;
+                    btnRefreshClient.Enabled = true;
+                    btnAddClient.Enabled = true;
                     btnExitClienti.Enabled = true;
                     break;
             }
         }
 
-        private void btnRefreshClient_Click(object sender, EventArgs e)
+        private void btnLinkAutoturisme_Click(object sender, EventArgs e)
         {
-            RefreshGrid();
+            this.DialogResult = DialogResult.OK;
+            onCloseParameters.Add("toOpen", "Autoturisme");
+            onCloseParameters.Add("clientId", dataGridViewClienti.SelectedRows[0].Cells["Id"].Value.ToString());
+            this.Close();
         }
 
-        private void btnAddClient_Click(object sender, EventArgs e)
+        private void btnLinkComenzi_Click(object sender, EventArgs e)
         {
-            using (var form = new ClientiAddMod(uow, "Add Client"))
-            {
-                if (form.ShowDialog() == DialogResult.OK)
-                {
-                    RefreshGrid();
-                }
-            }
-            
+            this.DialogResult = DialogResult.OK;
+            onCloseParameters.Add("toOpen", "Comenzi");
+            onCloseParameters.Add("clientId", dataGridViewClienti.SelectedRows[0].Cells["Id"].Value.ToString());
+            this.Close();
         }
 
         private void btnModifySelectedClient_Click(object sender, EventArgs e)
@@ -121,11 +127,25 @@ namespace ServiceAutoWinForm
             RefreshGrid();
         }
 
+        private void btnRefreshClient_Click(object sender, EventArgs e)
+        {
+            RefreshGrid();
+        }
+
+        private void btnAddClient_Click(object sender, EventArgs e)
+        {
+            using (var form = new ClientiAddMod(uow, "Add Client"))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshGrid();
+                }
+            }
+        }
+
         private void btnExitClienti_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        
     }
 }

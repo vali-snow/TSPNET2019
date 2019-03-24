@@ -53,6 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoAddMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoAddMod.Designer.cs">
+      <DependentUpon>AutoAddMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Autoturisme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autoturisme.Designer.cs">
+      <DependentUpon>Autoturisme.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clienti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +77,18 @@
     <Compile Include="ClientiAddMod.Designer.cs">
       <DependentUpon>ClientiAddMod.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComandaAddMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComandaAddMod.Designer.cs">
+      <DependentUpon>ComandaAddMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comenzi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comenzi.Designer.cs">
+      <DependentUpon>Comenzi.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +97,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AutoAddMod.resx">
+      <DependentUpon>AutoAddMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autoturisme.resx">
+      <DependentUpon>Autoturisme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Clienti.resx">
       <DependentUpon>Clienti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientiAddMod.resx">
       <DependentUpon>ClientiAddMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComandaAddMod.resx">
+      <DependentUpon>ComandaAddMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comenzi.resx">
+      <DependentUpon>Comenzi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
