@@ -97,6 +97,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SasiuAddMod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SasiuAddMod.Designer.cs">
+      <DependentUpon>SasiuAddMod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sasiuri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sasiuri.Designer.cs">
+      <DependentUpon>Sasiuri.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AutoAddMod.resx">
       <DependentUpon>AutoAddMod.cs</DependentUpon>
     </EmbeddedResource>
@@ -127,6 +139,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SasiuAddMod.resx">
+      <DependentUpon>SasiuAddMod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sasiuri.resx">
+      <DependentUpon>Sasiuri.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

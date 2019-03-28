@@ -45,13 +45,13 @@ namespace ServiceAutoWinForm
 
         private void btnSasiuri_Click(object sender, EventArgs e)
         {
-            //using (var form = new Sasiuri(uow))
-            //{
-            //    if (form.ShowDialog() == DialogResult.OK)
-            //    {
-            //        OpenOnClose(uow, form.onCloseParameters);
-            //    }
-            //}
+            using (var form = new Sasiuri(uow))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    OpenOnClose(uow, form.onCloseParameters);
+                }
+            }
         }
 
         private void btnComenzi_Click(object sender, EventArgs e)
