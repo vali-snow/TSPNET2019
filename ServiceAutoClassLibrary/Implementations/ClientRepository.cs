@@ -16,15 +16,5 @@ namespace ServiceAutoClassLibrary.Repositories
         internal ClientRepository(DbContext context) : base(context)
         {
         }
-
-        /// <summary>
-        /// Alternate way of getting all the comenzi for one client
-        /// </summary>
-        /// <param name="CustomerId"></param>
-        /// <returns></returns>
-        public IEnumerable<Comanda> GetComenziOfClient(int CustomerId)
-        {
-            return set.Find(CustomerId).Autoturisme.SelectMany(a => a.Comenzi).ToList();
-        }
     }
 }

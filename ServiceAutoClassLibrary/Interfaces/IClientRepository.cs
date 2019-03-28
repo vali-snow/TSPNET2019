@@ -7,6 +7,5 @@ namespace ServiceAutoClassLibrary.Repositories
     /// </summary>
     public interface IClientRepository : IRepository<Client>
     {
-        IEnumerable<Comanda> GetComenziOfClient(int CustomerId);
     }
 }
