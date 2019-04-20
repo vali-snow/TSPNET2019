@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoClassTesting", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWinForm", "ServiceAutoWinForm\ServiceAutoWinForm.csproj", "{4CFA7767-8886-4DE4-B6E5-0DFACC5A82BC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L7EFCodeFirst", "L7EFCodeFirst\L7EFCodeFirst.csproj", "{448A8A4F-13B5-499D-A6A7-878387EECA36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4CFA7767-8886-4DE4-B6E5-0DFACC5A82BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CFA7767-8886-4DE4-B6E5-0DFACC5A82BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CFA7767-8886-4DE4-B6E5-0DFACC5A82BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448A8A4F-13B5-499D-A6A7-878387EECA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448A8A4F-13B5-499D-A6A7-878387EECA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448A8A4F-13B5-499D-A6A7-878387EECA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448A8A4F-13B5-499D-A6A7-878387EECA36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
