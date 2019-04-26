@@ -46,6 +46,12 @@ namespace ServiceAutoClassLibrary.Repositories
         /// </summary>
         public ISasiuRepository Sasiuri { get; private set; }
 
+        public UnitOfWork()
+        {
+            _context = new ServiceAutoModelContainer();
+            InstantiateRepositories();
+        }
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -53,6 +59,11 @@ namespace ServiceAutoClassLibrary.Repositories
         public UnitOfWork(DbContext context)
         {
             _context = context;
+            InstantiateRepositories();
+        }
+
+        private void InstantiateRepositories()
+        {
             Autoturisme = new AutoRepository(_context);
             Clienti = new ClientRepository(_context);
             Comenzi = new ComandaRepository(_context);

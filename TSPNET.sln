@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L7EFCodeFirst", "L7EFCodeFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "L9InterfaceScenario", "L9InterfaceScenario\L9InterfaceScenario.csproj", "{1DC68C48-9A99-43FF-B6D3-97A4692502B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWcfServiceLibrary", "ServiceAutoWcfServiceLibrary\ServiceAutoWcfServiceLibrary.csproj", "{3082E35D-59FE-4816-BAB1-6F73B82B003F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1DC68C48-9A99-43FF-B6D3-97A4692502B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC68C48-9A99-43FF-B6D3-97A4692502B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC68C48-9A99-43FF-B6D3-97A4692502B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3082E35D-59FE-4816-BAB1-6F73B82B003F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3082E35D-59FE-4816-BAB1-6F73B82B003F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3082E35D-59FE-4816-BAB1-6F73B82B003F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3082E35D-59FE-4816-BAB1-6F73B82B003F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
