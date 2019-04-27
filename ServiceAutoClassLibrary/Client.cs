@@ -9,7 +9,6 @@
 
 namespace ServiceAutoClassLibrary
 {
-    using System;
     using System.Collections.Generic;
     using System.Runtime.Serialization;
 
@@ -22,19 +21,29 @@ namespace ServiceAutoClassLibrary
             this.Autoturisme = new HashSet<Auto>();
             this.Comenzi = new HashSet<Comanda>();
         }
-    
+
+        [DataMember]
         public int ClientId { get; set; }
+        [DataMember]
         public string Nume { get; set; }
+        [DataMember]
         public string Prenume { get; set; }
+        [DataMember]
         public string Adresa { get; set; }
+        [DataMember]
         public string Localitate { get; set; }
+        [DataMember]
         public string Judet { get; set; }
+        [DataMember]
         public string Telefon { get; set; }
+        [DataMember]
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [DataMember]
         public virtual ICollection<Auto> Autoturisme { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [DataMember]
         public virtual ICollection<Comanda> Comenzi { get; set; }
     }
 }

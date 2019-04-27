@@ -19,9 +19,6 @@ namespace ServiceAutoWcfServiceLibrary
         IEnumerable<T> GetAll();
 
         [OperationContract]
-        IEnumerable<T> GetFiltered(Expression<Func<T, bool>> predicate);
-
-        [OperationContract]
         void Add(T entity);
 
         [OperationContract]
@@ -35,7 +32,21 @@ namespace ServiceAutoWcfServiceLibrary
     }
 
     [ServiceContract]
-    public interface ISAService: IGenericService<Client>
-    {
-    }
+    public interface ISAAuto : IGenericService<Auto> { }
+    [ServiceContract]
+    public interface ISAClient : IGenericService<Client> { }
+    [ServiceContract]
+    public interface ISAComanda : IGenericService<Comanda> { }
+    [ServiceContract]
+    public interface ISADetaliiComanda : IGenericService<DetaliiComanda> { }
+    [ServiceContract]
+    public interface ISAImagine : IGenericService<Imagine> { }
+    [ServiceContract]
+    public interface ISAMaterial : IGenericService<Material> { }
+    [ServiceContract]
+    public interface ISAMecanic : IGenericService<Mecanic> { }
+    [ServiceContract]
+    public interface ISAOperatie : IGenericService<Operatie> { }
+    [ServiceContract]
+    public interface ISASasiu : IGenericService<Sasiu> { }
 }

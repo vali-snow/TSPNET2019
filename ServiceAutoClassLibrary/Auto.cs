@@ -9,9 +9,10 @@
 
 namespace ServiceAutoClassLibrary
 {
-    using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Auto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,16 +20,24 @@ namespace ServiceAutoClassLibrary
         {
             this.Comenzi = new HashSet<Comanda>();
         }
-    
+
+        [DataMember]
         public int AutoId { get; set; }
+        [DataMember]
         public string NumarAuto { get; set; }
+        [DataMember]
         public int SasiuId { get; set; }
+        [DataMember]
         public string SerieSasiu { get; set; }
+        [DataMember]
         public int ClientId { get; set; }
-    
+
+        [DataMember]
         public virtual Sasiu Sasiu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [DataMember]
         public virtual ICollection<Comanda> Comenzi { get; set; }
+        [DataMember]
         public virtual Client Client { get; set; }
     }
 }

@@ -9,12 +9,16 @@
 
 namespace ServiceAutoClassLibrary
 {
-    using System;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract]
     public enum Stare : int
     {
+        [EnumMember]
         InAsteptare = 0,
+        [EnumMember]
         Executata = 1,
+        [EnumMember]
         RefuzataLaExecutie = 2
     }
 }

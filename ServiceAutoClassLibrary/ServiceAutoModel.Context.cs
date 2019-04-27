@@ -18,6 +18,8 @@ namespace ServiceAutoClassLibrary
         public ServiceAutoModelContainer()
             : base("name=ServiceAutoModelContainer")
         {
+            Configuration.LazyLoadingEnabled = false;
+            Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

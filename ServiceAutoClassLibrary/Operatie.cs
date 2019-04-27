@@ -9,15 +9,20 @@
 
 namespace ServiceAutoClassLibrary
 {
-    using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Operatie
     {
+        [DataMember]
         public int OperatieId { get; set; }
+        [DataMember]
         public string Denumire { get; set; }
+        [DataMember]
         public decimal TimpExecutie { get; set; }
-    
+
+        [DataMember]
         public virtual DetaliiComanda DetaliiComanda { get; set; }
     }
 }

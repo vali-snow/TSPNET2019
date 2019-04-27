@@ -9,9 +9,10 @@
 
 namespace ServiceAutoClassLibrary
 {
-    using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class DetaliiComanda
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,17 +21,25 @@ namespace ServiceAutoClassLibrary
             this.Materiale = new HashSet<Material>();
             this.Imagini = new HashSet<Imagine>();
         }
-    
+
+        [DataMember]
         public int DetaliuComandaId { get; set; }
+        [DataMember]
         public int ComandaId { get; set; }
+        [DataMember]
         public int MecanicId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [DataMember]
         public virtual ICollection<Material> Materiale { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        [DataMember]
         public virtual ICollection<Imagine> Imagini { get; set; }
+        [DataMember]
         public virtual Operatie Operatie { get; set; }
+        [DataMember]
         public virtual Mecanic Mecanic { get; set; }
+        [DataMember]
         public virtual Comanda Comanda { get; set; }
     }
 }
