@@ -1,0 +1,32 @@
+﻿<Window x:Class="ServiceAutoWpfApp.Clienti"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceAutoWpfApp"
+        mc:Ignorable="d"
+        Title="Clienti" Height="450" Width="825" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="5*"/>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblTitle" Content="Main Menu" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="4" />
+        <DataGrid x:Name="gwClienti" Grid.Row="1" Grid.ColumnSpan="4" AutoGeneratingColumn="GwClienti_AutoGeneratingColumn" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" MinColumnWidth="100" SelectionChanged="GwClienti_SelectionChanged" SelectedIndex="0" />
+        <Button x:Name="btnLinkAutoturisme" Content="Link Autoturisme" Grid.Row="2" Grid.Column="0" />
+        <Button x:Name="btnLinkComenzi" Content="Link Comenzi" Grid.Row="2" Grid.Column="1" />
+        <Button x:Name="btnModifySelected" Content="Modify Selected" Grid.Row="2" Grid.Column="2" Click="BtnModifySelected_Click" />
+        <Button x:Name="btnRemoveSelected" Content="Remove Selected" Grid.Row="2" Grid.Column="3" Click="BtnRemoveSelected_Click" />
+        <Button x:Name="btnRefresh" Content="Refresh" Grid.Row="3" Grid.Column="0" />
+        <Button x:Name="btnAddNew" Content="Add New" Grid.Row="3" Grid.Column="2" Click="BtnAddNew_Click" />
+        <Button x:Name="btnExit" Content="Exit" Grid.Row="3" Grid.Column="3" Click="BtnExit_Click" />
+    </Grid>
+</Window>

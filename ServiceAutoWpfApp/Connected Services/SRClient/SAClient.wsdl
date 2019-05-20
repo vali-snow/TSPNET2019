@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SAClient" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:2019/BA2?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:2019/BA2?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:2019/BA2?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceAutoClassLibrary" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISAClient_GetById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetById" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_GetById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_AddRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRange" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_AddRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Modify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modify" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Modify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Remove_InputMessage">
+    <wsdl:part name="parameters" element="tns:Remove" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_Remove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_RemoveRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRange" />
+  </wsdl:message>
+  <wsdl:message name="ISAClient_RemoveRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveRangeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISAClient">
+    <wsdl:operation name="GetById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/GetById" message="tns:ISAClient_GetById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/GetByIdResponse" message="tns:ISAClient_GetById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/GetAll" message="tns:ISAClient_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/GetAllResponse" message="tns:ISAClient_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/Add" message="tns:ISAClient_Add_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/AddResponse" message="tns:ISAClient_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/AddRange" message="tns:ISAClient_AddRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/AddRangeResponse" message="tns:ISAClient_AddRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/Modify" message="tns:ISAClient_Modify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/ModifyResponse" message="tns:ISAClient_Modify_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Remove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/Remove" message="tns:ISAClient_Remove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/RemoveResponse" message="tns:ISAClient_Remove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/RemoveRange" message="tns:ISAClient_RemoveRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Client/RemoveRangeResponse" message="tns:ISAClient_RemoveRange_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISAClient" type="tns:ISAClient">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetById">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/GetById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRange">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/AddRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/Modify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Remove">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/Remove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveRange">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Client/RemoveRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SAClient">
+    <wsdl:port name="BasicHttpBinding_ISAClient" binding="tns:BasicHttpBinding_ISAClient">
+      <soap:address location="http://localhost:2019/SAClient" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

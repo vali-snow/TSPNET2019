@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a760b593-3d14-4ecd-85be-bab70dcf53af" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2019/BA5" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BA5.xsd" MetadataType="Schema" ID="b03729df-8b55-4ffc-95ef-46099ca13024" SourceId="1" SourceUrl="http://localhost:2019/BA5?xsd=xsd1" />
+    <MetadataFile FileName="BA5.disco" MetadataType="Disco" ID="2fe5487d-4278-41d4-8106-307e620a86ef" SourceId="1" SourceUrl="http://localhost:2019/BA5?disco" />
+    <MetadataFile FileName="BA51.xsd" MetadataType="Schema" ID="b95c2fff-57a3-4605-9772-6969eb073cb3" SourceId="1" SourceUrl="http://localhost:2019/BA5?xsd=xsd0" />
+    <MetadataFile FileName="SAImagine.wsdl" MetadataType="Wsdl" ID="228a8596-6374-4000-9d9b-9a493993d2fd" SourceId="1" SourceUrl="http://localhost:2019/BA5?wsdl" />
+    <MetadataFile FileName="BA52.xsd" MetadataType="Schema" ID="b82e7553-bbda-4088-a47a-af3ca83ad70a" SourceId="1" SourceUrl="http://localhost:2019/BA5?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

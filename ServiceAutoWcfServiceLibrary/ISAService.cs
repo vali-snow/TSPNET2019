@@ -25,6 +25,9 @@ namespace ServiceAutoWcfServiceLibrary
         void AddRange(IEnumerable<T> entities);
 
         [OperationContract]
+        void Modify(T entity);
+
+        [OperationContract]
         void Remove(T entity);
 
         [OperationContract]

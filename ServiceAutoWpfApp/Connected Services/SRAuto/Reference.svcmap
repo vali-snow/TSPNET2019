@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b3919e27-4cd8-462f-bf4f-bfbfef03c2bb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2019/BA1" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BA1.disco" MetadataType="Disco" ID="5e728eab-cb8d-4f75-89af-03329b482b2d" SourceId="1" SourceUrl="http://localhost:2019/BA1?disco" />
+    <MetadataFile FileName="BA1.xsd" MetadataType="Schema" ID="bd24e5cd-4b5c-4a43-9d73-9179a18baadf" SourceId="1" SourceUrl="http://localhost:2019/BA1?xsd=xsd1" />
+    <MetadataFile FileName="BA11.xsd" MetadataType="Schema" ID="b633f047-9b72-4cc1-b00b-bc8e5abe37c1" SourceId="1" SourceUrl="http://localhost:2019/BA1?xsd=xsd0" />
+    <MetadataFile FileName="SAAuto.wsdl" MetadataType="Wsdl" ID="cbf63f9a-fb4f-4c94-bb26-7fccc7d24ba4" SourceId="1" SourceUrl="http://localhost:2019/BA1?wsdl" />
+    <MetadataFile FileName="BA12.xsd" MetadataType="Schema" ID="5e44e9c5-b103-45e7-b8c9-79d5e02dd68d" SourceId="1" SourceUrl="http://localhost:2019/BA1?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

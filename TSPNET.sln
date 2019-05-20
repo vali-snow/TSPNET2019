@@ -21,6 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWcfServiceLibrar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWcfHost", "ServiceAutoWcfHost\ServiceAutoWcfHost.csproj", "{A9D33874-7B0E-4F82-907B-ED541A4C7D1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAutoWpfApp", "ServiceAutoWpfApp\ServiceAutoWpfApp.csproj", "{0A3F0CA9-9CD2-46E0-80E8-EB48F88A7337}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3082E35D-59FE-4816-BAB1-6F73B82B003F} = {3082E35D-59FE-4816-BAB1-6F73B82B003F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +68,10 @@ Global
 		{A9D33874-7B0E-4F82-907B-ED541A4C7D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D33874-7B0E-4F82-907B-ED541A4C7D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D33874-7B0E-4F82-907B-ED541A4C7D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A3F0CA9-9CD2-46E0-80E8-EB48F88A7337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A3F0CA9-9CD2-46E0-80E8-EB48F88A7337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A3F0CA9-9CD2-46E0-80E8-EB48F88A7337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A3F0CA9-9CD2-46E0-80E8-EB48F88A7337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

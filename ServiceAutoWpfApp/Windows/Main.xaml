@@ -1,0 +1,35 @@
+﻿<Window x:Class="ServiceAutoWpfApp.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceAutoWpfApp"
+        mc:Ignorable="d"
+        Title="Main Menu" Height="450" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label x:Name="lblTitle" Content="Main Menu" Grid.Row="0" HorizontalAlignment="Center" FontSize="20"/>
+        <Button x:Name="btnClienti" Content="Clienti" Grid.Row="1" Click="BtnClienti_Click"/>
+        <Button x:Name="btnAutoturisme" Content="Autoturisme" Grid.Row="2"/>
+        <Button x:Name="btnSasiuri" Content="Sasiuri" Grid.Row="3"/>
+        <Button x:Name="btnComenzi" Content="Comenzi" Grid.Row="4"/>
+        <Button x:Name="btnDetaliiComenzi" Content="Detalii Comenzi" Grid.Row="5"/>
+        <Button x:Name="btnMecanici" Content="Mecanici" Grid.Row="6"/>
+        <Button x:Name="btnMateriale" Content="Materiale" Grid.Row="7"/>
+        <Button x:Name="btnImagini" Content="Imagini" Grid.Row="8"/>
+        <Button x:Name="btnOperatii" Content="Operatii" Grid.Row="9"/>
+        <Button x:Name="btnExit" Content="Exit" Grid.Row="10" Click="BtnExit_Click"/>
+    </Grid>
+</Window>

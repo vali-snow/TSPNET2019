@@ -33,21 +33,30 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Auto entity)
         {
             uow.Autoturisme.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Auto> entities)
         {
             uow.Autoturisme.AddRange(entities);
+            uow.Complete();
+        }
+
+        public void Modify(Auto entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void Remove(Auto entity)
         {
             uow.Autoturisme.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Auto> entities)
         {
             uow.Autoturisme.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
@@ -79,21 +88,38 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Client entity)
         {
             uow.Clienti.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Client> entities)
         {
             uow.Clienti.AddRange(entities);
+            uow.Complete();
+        }
+
+        public void Modify(Client entity)
+        {
+            var client = uow.Clienti.GetById(entity.ClientId);
+            if (client.Nume != entity.Nume) { client.Nume = entity.Nume; }
+            if (client.Prenume != entity.Prenume) { client.Prenume = entity.Prenume; }
+            if (client.Adresa != entity.Adresa) { client.Adresa = entity.Adresa; }
+            if (client.Localitate != entity.Localitate) { client.Localitate = entity.Localitate; }
+            if (client.Judet != entity.Judet) { client.Judet = entity.Judet; }
+            if (client.Telefon != entity.Telefon) { client.Telefon = entity.Telefon; }
+            if (client.Email != entity.Email) { client.Email = entity.Email; }
+            uow.Complete();
         }
 
         public void Remove(Client entity)
         {
             uow.Clienti.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Client> entities)
         {
             uow.Clienti.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
@@ -125,21 +151,30 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Comanda entity)
         {
             uow.Comenzi.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Comanda> entities)
         {
             uow.Comenzi.AddRange(entities);
+            uow.Complete();
+        }
+
+        public void Modify(Comanda entity)
+        {
+            throw new NotImplementedException();
         }
 
         public void Remove(Comanda entity)
         {
             uow.Comenzi.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Comanda> entities)
         {
             uow.Comenzi.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
@@ -171,26 +206,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(DetaliiComanda entity)
         {
             uow.DetaliiComenzi.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<DetaliiComanda> entities)
         {
             uow.DetaliiComenzi.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(DetaliiComanda entity)
         {
             uow.DetaliiComenzi.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<DetaliiComanda> entities)
         {
             uow.DetaliiComenzi.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(DetaliiComanda entity)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -217,26 +261,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Imagine entity)
         {
             uow.Imagini.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Imagine> entities)
         {
             uow.Imagini.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(Imagine entity)
         {
             uow.Imagini.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Imagine> entities)
         {
             uow.Imagini.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(Imagine entity)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -263,26 +316,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Material entity)
         {
             uow.Materiale.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Material> entities)
         {
             uow.Materiale.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(Material entity)
         {
             uow.Materiale.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Material> entities)
         {
             uow.Materiale.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(Material entity)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -309,26 +371,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Mecanic entity)
         {
             uow.Mecanici.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Mecanic> entities)
         {
             uow.Mecanici.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(Mecanic entity)
         {
             uow.Mecanici.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Mecanic> entities)
         {
             uow.Mecanici.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(Mecanic entity)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -355,26 +426,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Operatie entity)
         {
             uow.Operatii.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Operatie> entities)
         {
             uow.Operatii.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(Operatie entity)
         {
             uow.Operatii.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Operatie> entities)
         {
             uow.Operatii.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(Operatie entity)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -401,26 +481,35 @@ namespace ServiceAutoWcfServiceLibrary
         public void Add(Sasiu entity)
         {
             uow.Sasiuri.Add(entity);
+            uow.Complete();
         }
 
         public void AddRange(IEnumerable<Sasiu> entities)
         {
             uow.Sasiuri.AddRange(entities);
+            uow.Complete();
         }
 
         public void Remove(Sasiu entity)
         {
             uow.Sasiuri.Remove(entity);
+            uow.Complete();
         }
 
         public void RemoveRange(IEnumerable<Sasiu> entities)
         {
             uow.Sasiuri.RemoveRange(entities);
+            uow.Complete();
         }
 
         public void Dispose()
         {
             uow.Dispose();
+        }
+
+        public void Modify(Sasiu entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

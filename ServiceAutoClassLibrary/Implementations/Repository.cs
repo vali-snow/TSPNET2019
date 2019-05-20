@@ -75,6 +75,7 @@ namespace ServiceAutoClassLibrary.Repositories
         /// <param name="entity"></param>
         public void Remove(T entity)
         {
+            set.Attach(entity);
             set.Remove(entity);
         }
 
@@ -84,6 +85,10 @@ namespace ServiceAutoClassLibrary.Repositories
         /// <param name="entities"></param>
         public void RemoveRange(IEnumerable<T> entities)
         {
+            foreach (var entity in entities)
+            {
+                set.Attach(entity);
+            }
             set.RemoveRange(entities);
         }
     }
