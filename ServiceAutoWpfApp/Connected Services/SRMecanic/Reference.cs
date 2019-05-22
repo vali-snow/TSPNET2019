@@ -27,6 +27,9 @@ namespace ServiceAutoWpfApp.SRMecanic {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Mecanic/AddRange", ReplyAction="http://tempuri.org/IGenericServiceOf_Mecanic/AddRangeResponse")]
         void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Mecanic> entities);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Mecanic/Modify", ReplyAction="http://tempuri.org/IGenericServiceOf_Mecanic/ModifyResponse")]
+        void Modify(ServiceAutoClassLibrary.Mecanic entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Mecanic/Remove", ReplyAction="http://tempuri.org/IGenericServiceOf_Mecanic/RemoveResponse")]
         void Remove(ServiceAutoClassLibrary.Mecanic entity);
         
@@ -75,6 +78,10 @@ namespace ServiceAutoWpfApp.SRMecanic {
         
         public void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Mecanic> entities) {
             base.Channel.AddRange(entities);
+        }
+        
+        public void Modify(ServiceAutoClassLibrary.Mecanic entity) {
+            base.Channel.Modify(entity);
         }
         
         public void Remove(ServiceAutoClassLibrary.Mecanic entity) {

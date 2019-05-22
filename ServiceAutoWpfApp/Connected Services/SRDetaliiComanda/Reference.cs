@@ -27,6 +27,9 @@ namespace ServiceAutoWpfApp.SRDetaliiComanda {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/AddRange", ReplyAction="http://tempuri.org/IGenericServiceOf_DetaliiComanda/AddRangeResponse")]
         void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.DetaliiComanda> entities);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/Modify", ReplyAction="http://tempuri.org/IGenericServiceOf_DetaliiComanda/ModifyResponse")]
+        void Modify(ServiceAutoClassLibrary.DetaliiComanda entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/Remove", ReplyAction="http://tempuri.org/IGenericServiceOf_DetaliiComanda/RemoveResponse")]
         void Remove(ServiceAutoClassLibrary.DetaliiComanda entity);
         
@@ -75,6 +78,10 @@ namespace ServiceAutoWpfApp.SRDetaliiComanda {
         
         public void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.DetaliiComanda> entities) {
             base.Channel.AddRange(entities);
+        }
+        
+        public void Modify(ServiceAutoClassLibrary.DetaliiComanda entity) {
+            base.Channel.Modify(entity);
         }
         
         public void Remove(ServiceAutoClassLibrary.DetaliiComanda entity) {

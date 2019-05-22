@@ -51,10 +51,22 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="Remove">
+  <xs:element name="Modify">
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ServiceAutoClassLibrary" minOccurs="0" name="entity" nillable="true" type="q5:Sasiu" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Remove">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiceAutoClassLibrary" minOccurs="0" name="entity" nillable="true" type="q6:Sasiu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -66,7 +78,7 @@
   <xs:element name="RemoveRange">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/ServiceAutoClassLibrary" minOccurs="0" name="entities" nillable="true" type="q6:ArrayOfSasiu" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/ServiceAutoClassLibrary" minOccurs="0" name="entities" nillable="true" type="q7:ArrayOfSasiu" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

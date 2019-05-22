@@ -27,6 +27,9 @@ namespace ServiceAutoWpfApp.SRImagine {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Imagine/AddRange", ReplyAction="http://tempuri.org/IGenericServiceOf_Imagine/AddRangeResponse")]
         void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Imagine> entities);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Imagine/Modify", ReplyAction="http://tempuri.org/IGenericServiceOf_Imagine/ModifyResponse")]
+        void Modify(ServiceAutoClassLibrary.Imagine entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Imagine/Remove", ReplyAction="http://tempuri.org/IGenericServiceOf_Imagine/RemoveResponse")]
         void Remove(ServiceAutoClassLibrary.Imagine entity);
         
@@ -75,6 +78,10 @@ namespace ServiceAutoWpfApp.SRImagine {
         
         public void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Imagine> entities) {
             base.Channel.AddRange(entities);
+        }
+        
+        public void Modify(ServiceAutoClassLibrary.Imagine entity) {
+            base.Channel.Modify(entity);
         }
         
         public void Remove(ServiceAutoClassLibrary.Imagine entity) {

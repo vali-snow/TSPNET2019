@@ -27,7 +27,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         
-        <Label x:Name="lblTitle" Content="Main Menu" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" />
+        <Label x:Name="lblTitle" Content="Client" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="5" />
         
         <Label x:Name="lblId" Content="Id:" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" />
         <TextBox x:Name="txtId" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" IsEnabled="False" />

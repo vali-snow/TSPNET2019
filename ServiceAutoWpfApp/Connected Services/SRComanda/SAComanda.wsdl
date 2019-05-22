@@ -31,6 +31,12 @@
   <wsdl:message name="ISAComanda_AddRange_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRangeResponse" />
   </wsdl:message>
+  <wsdl:message name="ISAComanda_Modify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modify" />
+  </wsdl:message>
+  <wsdl:message name="ISAComanda_Modify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyResponse" />
+  </wsdl:message>
   <wsdl:message name="ISAComanda_Remove_InputMessage">
     <wsdl:part name="parameters" element="tns:Remove" />
   </wsdl:message>
@@ -59,6 +65,10 @@
     <wsdl:operation name="AddRange">
       <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Comanda/AddRange" message="tns:ISAComanda_AddRange_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Comanda/AddRangeResponse" message="tns:ISAComanda_AddRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Comanda/Modify" message="tns:ISAComanda_Modify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_Comanda/ModifyResponse" message="tns:ISAComanda_Modify_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Remove">
       <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_Comanda/Remove" message="tns:ISAComanda_Remove_InputMessage" />
@@ -100,6 +110,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddRange">
       <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Comanda/AddRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_Comanda/Modify" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

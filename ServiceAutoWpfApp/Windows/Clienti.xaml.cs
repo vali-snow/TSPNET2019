@@ -22,6 +22,7 @@ namespace ServiceAutoWpfApp
     /// </summary>
     public partial class Clienti : Window
     {
+        internal Dictionary<string, string> onCloseParameters = new Dictionary<string, string>();
         private SRClient.SAClientClient uowClient = new SRClient.SAClientClient();
 
         public Clienti()
@@ -97,9 +98,30 @@ namespace ServiceAutoWpfApp
             }
         }
 
-        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        private void BtnLinkAutoturisme_Click(object sender, RoutedEventArgs e)
         {
+            DialogResult = true;
+            onCloseParameters.Add("toOpen", "Autoturisme");
+            onCloseParameters.Add("clientId", (gwClienti.SelectedItem as Client).ClientId.ToString());
             this.Close();
+        }
+
+        private void BtnLinkComenzi_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
+            onCloseParameters.Add("toOpen", "Comenzi");
+            onCloseParameters.Add("clientId", (gwClienti.SelectedItem as Client).ClientId.ToString());
+            this.Close();
+        }
+
+        private void BtnModifySelected_Click(object sender, RoutedEventArgs e)
+        {
+            var toOpen = new ClientiAM(uowClient, "Modify Client", gwClienti.SelectedItem as Client);
+            toOpen.ShowDialog();
+            if (toOpen.DialogResult.HasValue && toOpen.DialogResult.Value)
+            {
+                RefreshGrid();
+            }
         }
 
         private void BtnRemoveSelected_Click(object sender, RoutedEventArgs e)
@@ -111,25 +133,26 @@ namespace ServiceAutoWpfApp
             }
             uowClient.RemoveRange(clientsToDelete);
             RefreshGrid();
+        }        
+
+        private void BtnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            RefreshGrid();
         }
 
         private void BtnAddNew_Click(object sender, RoutedEventArgs e)
         {
             var toOpen = new ClientiAM(uowClient, "Add Client");
             toOpen.ShowDialog();
-            if (toOpen.DialogResult.HasValue && toOpen.DialogResult.Value) {
-                RefreshGrid();
-            }
-        }
-
-        private void BtnModifySelected_Click(object sender, RoutedEventArgs e)
-        {
-            var toOpen = new ClientiAM(uowClient, "Modify Client", gwClienti.SelectedItem as Client);
-            toOpen.ShowDialog();
             if (toOpen.DialogResult.HasValue && toOpen.DialogResult.Value)
             {
                 RefreshGrid();
             }
+        }
+
+        private void BtnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

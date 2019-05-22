@@ -31,6 +31,12 @@
   <wsdl:message name="ISADetaliiComanda_AddRange_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddRangeResponse" />
   </wsdl:message>
+  <wsdl:message name="ISADetaliiComanda_Modify_InputMessage">
+    <wsdl:part name="parameters" element="tns:Modify" />
+  </wsdl:message>
+  <wsdl:message name="ISADetaliiComanda_Modify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyResponse" />
+  </wsdl:message>
   <wsdl:message name="ISADetaliiComanda_Remove_InputMessage">
     <wsdl:part name="parameters" element="tns:Remove" />
   </wsdl:message>
@@ -59,6 +65,10 @@
     <wsdl:operation name="AddRange">
       <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/AddRange" message="tns:ISADetaliiComanda_AddRange_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/AddRangeResponse" message="tns:ISADetaliiComanda_AddRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/Modify" message="tns:ISADetaliiComanda_Modify_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/ModifyResponse" message="tns:ISADetaliiComanda_Modify_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="Remove">
       <wsdl:input wsaw:Action="http://tempuri.org/IGenericServiceOf_DetaliiComanda/Remove" message="tns:ISADetaliiComanda_Remove_InputMessage" />
@@ -100,6 +110,15 @@
     </wsdl:operation>
     <wsdl:operation name="AddRange">
       <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_DetaliiComanda/AddRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Modify">
+      <soap:operation soapAction="http://tempuri.org/IGenericServiceOf_DetaliiComanda/Modify" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

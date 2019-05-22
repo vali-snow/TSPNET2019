@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
         <Label x:Name="lblTitle" Content="Main Menu" Grid.Row="0" HorizontalAlignment="Center" FontSize="20"/>
         <Button x:Name="btnClienti" Content="Clienti" Grid.Row="1" Click="BtnClienti_Click"/>
-        <Button x:Name="btnAutoturisme" Content="Autoturisme" Grid.Row="2"/>
+        <Button x:Name="btnAutoturisme" Content="Autoturisme" Grid.Row="2" Click="BtnAutoturisme_Click"/>
         <Button x:Name="btnSasiuri" Content="Sasiuri" Grid.Row="3"/>
         <Button x:Name="btnComenzi" Content="Comenzi" Grid.Row="4"/>
         <Button x:Name="btnDetaliiComenzi" Content="Detalii Comenzi" Grid.Row="5"/>

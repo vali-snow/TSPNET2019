@@ -57,6 +57,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Windows\Autoturisme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AutoturismeAM.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\Clienti.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +80,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Windows\Autoturisme.xaml.cs">
+      <DependentUpon>Autoturisme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AutoturismeAM.xaml.cs">
+      <DependentUpon>AutoturismeAM.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\Clienti.xaml.cs">
       <DependentUpon>Clienti.xaml</DependentUpon>

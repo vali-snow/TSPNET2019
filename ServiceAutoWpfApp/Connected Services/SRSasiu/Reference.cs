@@ -27,6 +27,9 @@ namespace ServiceAutoWpfApp.SRSasiu {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Sasiu/AddRange", ReplyAction="http://tempuri.org/IGenericServiceOf_Sasiu/AddRangeResponse")]
         void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Sasiu> entities);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Sasiu/Modify", ReplyAction="http://tempuri.org/IGenericServiceOf_Sasiu/ModifyResponse")]
+        void Modify(ServiceAutoClassLibrary.Sasiu entity);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGenericServiceOf_Sasiu/Remove", ReplyAction="http://tempuri.org/IGenericServiceOf_Sasiu/RemoveResponse")]
         void Remove(ServiceAutoClassLibrary.Sasiu entity);
         
@@ -75,6 +78,10 @@ namespace ServiceAutoWpfApp.SRSasiu {
         
         public void AddRange(System.Collections.ObjectModel.ObservableCollection<ServiceAutoClassLibrary.Sasiu> entities) {
             base.Channel.AddRange(entities);
+        }
+        
+        public void Modify(ServiceAutoClassLibrary.Sasiu entity) {
+            base.Channel.Modify(entity);
         }
         
         public void Remove(ServiceAutoClassLibrary.Sasiu entity) {

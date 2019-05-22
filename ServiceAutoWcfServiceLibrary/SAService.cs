@@ -44,7 +44,20 @@ namespace ServiceAutoWcfServiceLibrary
 
         public void Modify(Auto entity)
         {
-            throw new NotImplementedException();
+            var auto = uow.Autoturisme.GetById(entity.AutoId);
+            if (auto.NumarAuto != entity.NumarAuto) { auto.NumarAuto = entity.NumarAuto; }
+            if (auto.SasiuId != entity.SasiuId)
+            {
+                auto.SasiuId = entity.SasiuId;
+                auto.Sasiu = uow.Sasiuri.GetById(entity.SasiuId);
+            }
+            if (auto.SerieSasiu != entity.SerieSasiu) { auto.SerieSasiu = entity.SerieSasiu; }
+            if (auto.ClientId != entity.ClientId)
+            {
+                auto.ClientId = entity.ClientId;
+                auto.Client = uow.Clienti.GetById(entity.ClientId);
+            }
+            uow.Complete();
         }
 
         public void Remove(Auto entity)
